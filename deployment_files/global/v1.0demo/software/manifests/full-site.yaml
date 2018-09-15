@@ -29,3 +29,4 @@ data:
     - openstack-component-infrastructure
     - openstack-component-shared
     - openstack-compute-kit
+    - contrail-controller
