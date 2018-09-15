@@ -412,22 +412,22 @@ data:
         subpath: helm-toolkit
         reference: b6fc24b9960bc6de29aa70c7d5b7725319046160
     tungstenfabric:
-      tf-controller:
+      controller:
         type: git
         location: https://github.com/Juniper/contrail-helm-deployer
         subpath: contrail-controller
         reference: 86869b2ee3e12a9aeacd7b12b874b0ae1076296a
-      tf-analytics:
+      analytics:
         type: git
         location: https://github.com/Juniper/contrail-helm-deployer
         subpath: contrail-analytics
         reference: 86869b2ee3e12a9aeacd7b12b874b0ae1076296a
-      tf-thirdparty:
+      thirdparty:
         type: git
         location: https://github.com/Juniper/contrail-helm-deployer
         subpath: contrail-thirdparty
         reference: 86869b2ee3e12a9aeacd7b12b874b0ae1076296a
-      tf-vrouter:
+      vrouter:
         type: git
         location: https://github.com/Juniper/contrail-helm-deployer
         subpath: contrail-vrouter
@@ -461,9 +461,9 @@ data:
       # should probably be moved to https://quay.io/repository/airshipit/
       storage_init: &storage_init docker.io/port/ceph-config-helper:v1.10.2
       # contrail common
-      tf_nodemgr: &tf_nodemgr opencontrailnightly/contrail-nodemgr:latest
-      tf_status: &tf_status opencontrailnightly/contrail-status:latest
-      tf_node_init: &tf_node_init opencontrailnightly/contrail-node-init:latest
+      tungstenfabric_nodemgr: &tungstenfabric_nodemgr opencontrailnightly/contrail-nodemgr:latest
+      tungstenfabric_status: &tungstenfabric_status opencontrailnightly/contrail-status:latest
+      tungstenfabric_node_init: &tungstenfabric_node_init opencontrailnightly/contrail-node-init:latest
     keystone: &ref_keystone
       ks_endpoints: *heat
       ks_service: *heat
@@ -738,7 +738,7 @@ data:
         rabbitmq: docker.io/rabbitmq:3.7.4
         dep_check: *dep_check
     tungstenfabric:
-      tf_controller:
+      controller:
         control: opencontrailnightly/contrail-controller-control-control:latest
         control_dns: opencontrailnightly/contrail-controller-control-dns:latest
         control_named: opencontrailnightly/contrail-controller-control-named:latest
@@ -748,39 +748,39 @@ data:
         config_svcmonitor: opencontrailnightly/contrail-controller-config-svcmonitor:latest
         webui_middleware: opencontrailnightly/contrail-controller-webui-job:latest
         webui: opencontrailnightly/contrail-controller-webui-web:latest
-        nodemgr: *tf_nodemgr
-        contrail_status: *tf_status
-        node_init: *tf_node_init
+        nodemgr: *tungstenfabric_nodemgr
+        contrail_status: *tungstenfabric_status
+        node_init: *tungstenfabric_node_init
         dep_check: *dep_check
-      tf_analytics:
+      analytics:
         analytics_api: opencontrailnightly/contrail-analytics-api:latest
         analytics_collector: opencontrailnightly/contrail-analytics-collector:latest
         analytics_alarm_gen: opencontrailnightly/contrail-analytics-alarm-gen:latest
         analytics_query_engine: opencontrailnightly/contrail-analytics-query-engine:latest
         analytics_snmp_collector: opencontrailnightly/contrail-analytics-snmp-collector:latest
         analytics_topology: opencontrailnightly/contrail-analytics-topology:latest
-        nodemgr: *tf_nodemgr
-        contrail_status: *tf_status
-        node_init: *tf_node_init
+        nodemgr: *tungstenfabric_nodemgr
+        contrail_status: *tungstenfabric_status
+        node_init: *tungstenfabric_node_init
         dep_check: *dep_check
-      tf_thirdparty:
+      thirdparty:
         kafka: opencontrailnightly/contrail-external-kafka:latest
         cassandra: opencontrailnightly/contrail-external-cassandra:latest
         redis: opencontrailnightly/contrail-external-redis:latest
         zookeeper: opencontrailnightly/contrail-external-zookeeper:latest
-        nodemgr: *tf_nodemgr
-        contrail_status: *tf_status
-        node_init: *tf_node_init
+        nodemgr: *tungstenfabric_nodemgr
+        contrail_status: *tungstenfabric_status
+        node_init: *tungstenfabric_node_init
         dep_check: *dep_check
-      tf_vrouter:
+      vrouter:
         kernel_init: opencontrailnightly/contrail-vrouter-kernel-init:latest
         kernel_build_init: opencontrailnightly/contrail-vrouter-kernel-build-init:latest
         kernel_init_dpdk: opencontrailnightly/contrail-vrouter-kernel-init-dpdk:latest
         agent: opencontrailnightly/contrail-vrouter-agent:latest
         agent_dpdk: opencontrailnightly/contrail-vrouter-agent-dpdk:latest
-        nodemgr: *tf_nodemgr
-        contrail_status: *tf_status
-        node_init: *tf_node_init
+        nodemgr: *tungstenfabric_nodemgr
+        contrail_status: *tungstenfabric_status
+        node_init: *tungstenfabric_node_init
         dep_check: *dep_check
   packages:
     named:
