@@ -2,13 +2,13 @@
 schema: armada/ChartGroup/v1
 metadata:
   schema: metadata/Document/v1
-  name: contrail-controller
+  name: tungstenfabric-controller
   layeringDefinition:
     abstract: false
     layer: global
   storagePolicy: cleartext
 data:
-  description: "Contrail Controller components"
+  description: "TF Controller components"
   sequenced: False
   chart_group:
     - controller
