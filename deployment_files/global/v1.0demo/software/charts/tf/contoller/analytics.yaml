@@ -38,10 +38,31 @@ data:
     volume:
       enabled: false
     labels:
-      server:
-        node_selector_key: openstack-control-plane
+      analytics:
+        node_selector_key: tungstenfabric-controller
         node_selector_value: enabled
-      prometheus_mysql_exporter:
-        node_selector_key: openstack-control-plane
-        node_selector_value: enabled
+  dependencies:
+    - tungstenfabric-analytics-helm-toolkit
+---
+schema: armada/Chart/v1
+metadata:
+  schema: metadata/Document/v1
+  name: tungstenfabric-analytics-helm-toolkit
+  layeringDefinition:
+    abstract: false
+    layer: global
+  storagePolicy: cleartext
+  substitutions:
+    # Chart source
+    - src:
+        schema: pegleg/SoftwareVersions/v1
+        name: software-versions
+        path: .charts.tungstenfabric.tf-htk
+      dest:
+        path: .source
+data:
+  chart_name: tungstenfabric-analytics-helm-toolkit
+  release: tungstenfabric-analytics-helm-toolkit
+  namespace: helm-toolkit
+  values: {}
   dependencies: []

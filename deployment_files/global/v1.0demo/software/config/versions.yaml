@@ -432,6 +432,11 @@ data:
         location: https://github.com/Juniper/contrail-helm-deployer
         subpath: contrail-vrouter
         reference: 86869b2ee3e12a9aeacd7b12b874b0ae1076296a
+      tf-htk:
+        type: git
+        location: https://git.openstack.org/openstack/openstack-helm-infra
+        subpath: helm-toolkit
+        reference: b6fc24b9960bc6de29aa70c7d5b7725319046160
 
   files:
     kubelet: https://dl.k8s.io/v1.10.2/kubernetes-node-linux-amd64.tar.gz
