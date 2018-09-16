@@ -35,8 +35,6 @@ data:
   upgrade:
     no_hooks: false
   values:
-    volume:
-      enabled: false
     labels:
       analytics:
         node_selector_key: tungstenfabric-controller
