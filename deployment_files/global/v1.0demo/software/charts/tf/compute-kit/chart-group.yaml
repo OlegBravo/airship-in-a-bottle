@@ -10,5 +10,4 @@ metadata:
 data:
   description: "Deploy vrouter service"
   sequenced: False
-  chart_group:
-    - vrouter
+  chart_group: []
