@@ -1,0 +1,47 @@
+---
+schema: armada/Chart/v1
+metadata:
+  schema: metadata/Document/v1
+  name: thirdparty
+  layeringDefinition:
+    abstract: false
+    layer: global
+  storagePolicy: cleartext
+  substitutions:
+    # Chart source
+    - src:
+        schema: pegleg/SoftwareVersions/v1
+        name: software-versions
+        path: .charts.tungstenfabric.thirdparty
+      dest:
+        path: .source
+    # Images
+    - src:
+        schema: pegleg/SoftwareVersions/v1
+        name: software-versions
+        path: .images.tungstenfabric.thirdparty
+      dest:
+        path: .values.images.tags
+data:
+  chart_name: thirdparty
+  release: contrail-thirdparty
+  namespace: tf
+  wait:
+    timeout: 1800
+    labels:
+      release_group: airship-tungstenfabric-thirdparty
+  install:
+    no_hooks: false
+  upgrade:
+    no_hooks: false
+  values:
+    volume:
+      enabled: false
+    labels:
+      server:
+        node_selector_key: openstack-control-plane
+        node_selector_value: enabled
+      prometheus_mysql_exporter:
+        node_selector_key: openstack-control-plane
+        node_selector_value: enabled
+  dependencies: []
