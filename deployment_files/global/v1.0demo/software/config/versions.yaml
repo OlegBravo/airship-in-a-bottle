@@ -416,27 +416,27 @@ data:
         type: git
         location: https://github.com/progmaticlab/contrail-helm-deployer
         subpath: contrail-controller
-        reference: 3af68d9d64fc8672e219af6d054e41072bb0c477
+        reference: master
       analytics:
         type: git
         location: https://github.com/progmaticlab/contrail-helm-deployer
         subpath: contrail-analytics
-        reference: 3af68d9d64fc8672e219af6d054e41072bb0c477
+        reference: master
       thirdparty:
         type: git
         location: https://github.com/progmaticlab/contrail-helm-deployer
         subpath: contrail-thirdparty
-        reference: 3af68d9d64fc8672e219af6d054e41072bb0c477
+        reference: master
       vrouter:
         type: git
         location: https://github.com/progmaticlab/contrail-helm-deployer
         subpath: contrail-vrouter
-        reference: 3af68d9d64fc8672e219af6d054e41072bb0c477
+        reference: master
       tf-htk:
         type: git
         location: https://github.com/progmaticlab/contrail-helm-deployer
         subpath: helm-toolkit-contrail
-        reference: 3af68d9d64fc8672e219af6d054e41072bb0c477
+        reference: master
 
   files:
     kubelet: https://dl.k8s.io/v1.10.2/kubernetes-node-linux-amd64.tar.gz
