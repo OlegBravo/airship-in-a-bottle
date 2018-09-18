@@ -414,29 +414,29 @@ data:
     tungstenfabric:
       controller:
         type: git
-        location: https://github.com/Juniper/contrail-helm-deployer
+        location: https://github.com/progmaticlab/contrail-helm-deployer
         subpath: contrail-controller
-        reference: 86869b2ee3e12a9aeacd7b12b874b0ae1076296a
+        reference: e9df332c2a27e108c9576edcaa2230d0240e998a
       analytics:
         type: git
-        location: https://github.com/Juniper/contrail-helm-deployer
+        location: https://github.com/progmaticlab/contrail-helm-deployer
         subpath: contrail-analytics
-        reference: 86869b2ee3e12a9aeacd7b12b874b0ae1076296a
+        reference: e9df332c2a27e108c9576edcaa2230d0240e998a
       thirdparty:
         type: git
-        location: https://github.com/Juniper/contrail-helm-deployer
+        location: https://github.com/progmaticlab/contrail-helm-deployer
         subpath: contrail-thirdparty
-        reference: 86869b2ee3e12a9aeacd7b12b874b0ae1076296a
+        reference: e9df332c2a27e108c9576edcaa2230d0240e998a
       vrouter:
         type: git
-        location: https://github.com/Juniper/contrail-helm-deployer
+        location: https://github.com/progmaticlab/contrail-helm-deployer
         subpath: contrail-vrouter
-        reference: 86869b2ee3e12a9aeacd7b12b874b0ae1076296a
+        reference: e9df332c2a27e108c9576edcaa2230d0240e998a
       tf-htk:
         type: git
-        location: https://github.com/Juniper/contrail-helm-deployer
+        location: https://github.com/progmaticlab/contrail-helm-deployer
         subpath: helm-toolkit-contrail
-        reference: 86869b2ee3e12a9aeacd7b12b874b0ae1076296a
+        reference: e9df332c2a27e108c9576edcaa2230d0240e998a
 
   files:
     kubelet: https://dl.k8s.io/v1.10.2/kubernetes-node-linux-amd64.tar.gz
