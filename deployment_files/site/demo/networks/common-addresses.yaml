@@ -25,9 +25,21 @@ metadata:
     - src:
         schema: dev/Configurables/v1
         name: dev-configurables
+        path: .hostname
+      dest:
+        path: .hosts_entries[0].names[0]
+    - src:
+        schema: dev/Configurables/v1
+        name: dev-configurables
         path: .hostip
       dest:
         path: .genesis.ip
+    - src:
+        schema: dev/Configurables/v1
+        name: dev-configurables
+        path: .hostip
+      dest:
+        path: .hosts_entries[0].ip
     - src:
         schema: dev/Configurables/v1
         name: dev-configurables
@@ -80,6 +92,11 @@ data:
   etcd:
     container_port: 2379
     haproxy_port: 2378
+
+  hosts_entries:
+    - ip: REPLACEME
+      names:
+        - REPLACEME
 
   proxy:
     http:
