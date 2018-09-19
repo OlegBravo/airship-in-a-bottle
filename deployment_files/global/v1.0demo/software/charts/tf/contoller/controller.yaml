@@ -33,10 +33,6 @@ data:
   chart_name: controller
   release: contrail-controller
   namespace: tf
-  wait:
-    timeout: 1800
-    labels:
-      release_group: airship-tungstenfabric-controller
   install:
     no_hooks: false
   upgrade:
@@ -46,6 +42,7 @@ data:
       contrail_env:
         LOG_LEVEL: SYS_DEBUG
         CLOUD_ORCHESTRATOR: openstack
+        BGP_PORT: "1179"
     labels:
       control:
         node_selector_key: tungstenfabric-controller

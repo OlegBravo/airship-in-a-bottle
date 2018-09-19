@@ -33,10 +33,6 @@ data:
   chart_name: thirdparty
   release: contrail-thirdparty
   namespace: tf
-  wait:
-    timeout: 1800
-    labels:
-      release_group: airship-tungstenfabric-thirdparty
   install:
     no_hooks: false
   upgrade:
@@ -46,6 +42,9 @@ data:
       contrail_env:
         LOG_LEVEL: SYS_DEBUG
         CLOUD_ORCHESTRATOR: openstack
+        JVM_EXTRA_OPTS: "-Xms1g -Xmx2g"
+        CONFIG_DATABASE_NODEMGR__DEFAULTS__minimum_diskGB: "2"
+        DATABASE_NODEMGR__DEFAULTS__minimum_diskGB: "2"
     labels:
       configdb:
         node_selector_key: tungstenfabric-controller
