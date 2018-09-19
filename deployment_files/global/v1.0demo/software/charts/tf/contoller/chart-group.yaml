@@ -11,6 +11,6 @@ data:
   description: "TF Controller components"
   sequenced: False
   chart_group:
+    - controller
     - thirdparty
     - analytics
-    - controller
