@@ -78,6 +78,20 @@ metadata:
       dest:
         path: .kubernetes.haproxy_port
 
+    # /etc/hosts
+    - src:
+        schema: pegleg/CommonAddresses/v1
+        name: common-addresses
+        path: .hosts_entries[0].ip
+      dest:
+        path: .hosts_entries[0].ip
+    - src:
+        schema: pegleg/CommonAddresses/v1
+        name: common-addresses
+        path: .hosts_entries[0].names[0]
+      dest:
+        path: .hosts_entries[0].names[0]
+
 data:
   dns:
     bootstrap_validation_checks:
