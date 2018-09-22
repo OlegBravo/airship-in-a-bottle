@@ -65,6 +65,8 @@ HOSTIP=${HOSTIP:-""}
 HOSTCIDR=${HOSTCIDR:-""}
 # The interface on the host/genesis node. e.g.: 'ens3'
 NODE_NET_IFACE=${NODE_NET_IFACE:-""}
+# The gateway for NODE_NET_IFACE if it is required
+NODE_NET_IFACE_GATEWAY_IP=${NODE_NET_IFACE_GATEWAY_IP:-""}
 # Allowance for Genesis/Armada to settle in seconds:
 POST_GENESIS_DELAY=${POST_GENESIS_DELAY:-60}
 
@@ -190,6 +192,7 @@ data:
   hostip: ${HOSTIP}
   hostcidr: ${HOSTCIDR}
   interface: ${NODE_NET_IFACE}
+  interface_gw: ${NODE_NET_IFACE_GATEWAY_IP}
 EOF
 }
 

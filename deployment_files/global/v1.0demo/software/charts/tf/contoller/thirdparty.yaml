@@ -26,7 +26,7 @@ metadata:
     - src:
         schema: pegleg/CommonAddresses/v1
         name: common-addresses
-        path: .genesis.ip
+        path: .tungstenfabric.ip
       dest:
         path: .values.global.contrail_env.CONTROLLER_NODES
 data:

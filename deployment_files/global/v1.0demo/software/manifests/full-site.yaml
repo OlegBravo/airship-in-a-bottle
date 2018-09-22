@@ -30,3 +30,4 @@ data:
     - openstack-component-shared
     - openstack-compute-kit
     - tungstenfabric-controller
+    - tungstenfabric-compute-kit

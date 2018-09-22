@@ -2,7 +2,7 @@
 schema: armada/Chart/v1
 metadata:
   schema: metadata/Document/v1
-  name: controller
+  name: vrouter
   layeringDefinition:
     abstract: false
     layer: global
@@ -12,14 +12,14 @@ metadata:
     - src:
         schema: pegleg/SoftwareVersions/v1
         name: software-versions
-        path: .charts.tungstenfabric.controller
+        path: .charts.tungstenfabric.vrouter
       dest:
         path: .source
     # Images
     - src:
         schema: pegleg/SoftwareVersions/v1
         name: software-versions
-        path: .images.tungstenfabric.controller
+        path: .images.tungstenfabric.vrouter
       dest:
         path: .values.global.images.tags
     # IP-s
@@ -30,8 +30,8 @@ metadata:
       dest:
         path: .values.global.contrail_env.CONTROLLER_NODES
 data:
-  chart_name: controller
-  release: contrail-controller
+  chart_name: vrouter
+  release: contrail-vrouter
   namespace: tf
   install:
     no_hooks: false
@@ -42,24 +42,19 @@ data:
       contrail_env:
         LOG_LEVEL: SYS_DEBUG
         CLOUD_ORCHESTRATOR: openstack
-        BGP_PORT: "1179"
+        VROUTER_GATEWAY: 10.$((NET_BASE_PREFIX+1)).$JOB_RND.1
+        VROUTER_ENCRYPTION: FALSE
     labels:
-      control:
-        node_selector_key: tungstenfabric-controller
-        node_selector_value: enabled
-      config:
-        node_selector_key: tungstenfabric-controller
-        node_selector_value: enabled
-      webui:
+      vrouter_agent_kernel:
         node_selector_key: tungstenfabric-controller
         node_selector_value: enabled
   dependencies:
-    - tungstenfabric-controller-helm-toolkit
+    - tungstenfabric-vrouter-helm-toolkit
 ---
 schema: armada/Chart/v1
 metadata:
   schema: metadata/Document/v1
-  name: tungstenfabric-controller-helm-toolkit
+  name: tungstenfabric-vrouter-helm-toolkit
   layeringDefinition:
     abstract: false
     layer: global
@@ -73,8 +68,8 @@ metadata:
       dest:
         path: .source
 data:
-  chart_name: tungstenfabric-controller-helm-toolkit
-  release: tungstenfabric-controller-helm-toolkit
+  chart_name: tungstenfabric-vrouter-helm-toolkit
+  release: tungstenfabric-vrouter-helm-toolkit
   namespace: helm-toolkit
   values: {}
   dependencies: []

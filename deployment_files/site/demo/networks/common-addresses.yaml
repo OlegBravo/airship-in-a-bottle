@@ -59,6 +59,24 @@ metadata:
       dest:
         path: .storage.ceph.cluster_cidr
 
+    - src:
+        schema: dev/Configurables/v1
+        name: dev-configurables
+        path: .hostip
+      dest:
+        path: .tungstenfabric.ip
+    - src:
+        schema: dev/Configurables/v1
+        name: dev-configurables
+        path: .interface
+      dest:
+        path: .tungstenfabric.interface
+    - src:
+        schema: dev/Configurables/v1
+        name: dev-configurables
+        path: .interface_gw
+      dest:
+        path: .tungstenfabric.interface_gw
 
 data:
   calico:
@@ -117,4 +135,10 @@ data:
     ceph:
       public_cidr: REPLACEME
       cluster_cidr: REPLACEME
+
+  tungstenfabric:
+    ip: REPLACEME
+    interface: REPLACEME
+    interface_gw: REPLACE_ME
+
 ...
