@@ -11,6 +11,7 @@ data:
   release_prefix: airship
   chart_groups:
     - kubernetes-proxy
+    - tungstenfabric-controller
     - kubernetes-container-networking
     - kubernetes-dns
     - kubernetes-etcd
