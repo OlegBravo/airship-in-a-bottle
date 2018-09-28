@@ -42,6 +42,9 @@ data:
       contrail_env:
         LOG_LEVEL: SYS_DEBUG
         BGP_PORT: "1179"
+        CLOUD_ORCHESTRATOR: "none"
+        AAA_MODE: "no-auth"
+        AUTH_MODE: "noauth"
     labels:
       control:
         node_selector_key: tungstenfabric-controller
