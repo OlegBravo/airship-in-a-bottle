@@ -85,9 +85,9 @@ data:
         reference: b6fc24b9960bc6de29aa70c7d5b7725319046160
       ingress:
         type: git
-        location: https://git.openstack.org/openstack/openstack-helm-infra
+        location: https://github.com/progmaticlab/openstack-helm-infra
         subpath: ingress
-        reference: b6fc24b9960bc6de29aa70c7d5b7725319046160
+        reference: latest
       ingress-htk:
         type: git
         location: https://git.openstack.org/openstack/openstack-helm-infra

@@ -51,6 +51,11 @@ data:
     pod:
       replicas:
         error_page: 2
+    endpoints:
+      ingress:
+        port:
+          server:
+            default: 8182
   dependencies:
     - ingress-kube-system-htk
 ---
