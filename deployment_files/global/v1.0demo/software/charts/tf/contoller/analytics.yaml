@@ -45,10 +45,14 @@ data:
         JVM_EXTRA_OPTS: "-Xms1g -Xmx2g"
         CONFIG_DATABASE_NODEMGR__DEFAULTS__minimum_diskGB: "2"
         DATABASE_NODEMGR__DEFAULTS__minimum_diskGB: "2"
+        CLOUD_ORCHESTRATOR: openstack
+        AAA_MODE: noauth
     labels:
       analytics:
         node_selector_key: tungstenfabric-controller
         node_selector_value: enabled
+    manifests:
+      configmap_analytics_keystone: false
   dependencies:
     - tungstenfabric-analytics-helm-toolkit
 ---
