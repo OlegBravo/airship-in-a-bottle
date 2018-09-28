@@ -41,10 +41,7 @@ data:
     global:
       contrail_env:
         LOG_LEVEL: SYS_DEBUG
-        CLOUD_ORCHESTRATOR: openstack
         BGP_PORT: "1179"
-        CLOUD_ORCHESTRATOR: openstack
-        AAA_MODE: noauth
     labels:
       control:
         node_selector_key: tungstenfabric-controller
