@@ -12,7 +12,8 @@ data:
   chart_groups:
     - kubernetes-proxy
     - tungstenfabric-controller
-    - kubernetes-container-networking
+    - tungstenfabric-compute-kit
+#    - kubernetes-container-networking
     - kubernetes-dns
     - kubernetes-etcd
     - kubernetes-core

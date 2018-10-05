@@ -55,8 +55,12 @@ data:
       webui:
         node_selector_key: tungstenfabric-controller
         node_selector_value: enabled
+      kubemanager:
+        node_selector_key: tungstenfabric-controller
+        node_selector_value: enabled
     manifests:
       configmap_controller_keystone: false
+      daemonset_kubemanager: true
   dependencies:
     - tungstenfabric-controller-helm-toolkit
 ---

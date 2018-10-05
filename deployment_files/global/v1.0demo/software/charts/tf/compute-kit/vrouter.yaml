@@ -48,6 +48,8 @@ data:
       vrouter_agent_kernel:
         node_selector_key: tungstenfabric-controller
         node_selector_value: enabled
+    manifests:
+      job_cni_init: true
   dependencies:
     - tungstenfabric-vrouter-helm-toolkit
 ---
