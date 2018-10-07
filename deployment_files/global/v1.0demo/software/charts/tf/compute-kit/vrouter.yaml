@@ -60,7 +60,7 @@ data:
         node_selector_key: tungstenfabric-compute-kit
         node_selector_value: enabled
     manifests:
-      job_cni_init: true
+      job_kubernetes_cni_init: true
   dependencies:
     - tungstenfabric-vrouter-helm-toolkit
 ---
