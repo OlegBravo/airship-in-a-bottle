@@ -125,6 +125,12 @@ data:
           - bgp
         IP_AUTODETECTION_METHOD: interface=ens3
         WAIT_FOR_STORAGE: "true"
+        FELIX_PROMETHEUSMETRICSPORT: "9090"
+
+    monitoring:
+      prometheus:
+        calico_node:
+          port: 9090
 
     endpoints:
       etcd:
