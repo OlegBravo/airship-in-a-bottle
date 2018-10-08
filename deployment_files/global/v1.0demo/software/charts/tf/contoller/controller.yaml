@@ -61,7 +61,7 @@ data:
       webui:
         node_selector_key: tungstenfabric-controller
         node_selector_value: enabled
-      kube-manager:
+      kube_manager:
         node_selector_key: tungstenfabric-controller
         node_selector_value: enabled
     endpoints:
