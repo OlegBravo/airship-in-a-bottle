@@ -754,7 +754,7 @@ data:
         config_svcmonitor: docker.io/opencontrailnightly/contrail-controller-config-svcmonitor:latest
         webui_middleware: docker.io/opencontrailnightly/contrail-controller-webui-job:latest
         webui: docker.io/opencontrailnightly/contrail-controller-webui-web:latest
-        kubemanager: docker.io/opencontrailnightly/contrail-kubernetes-kube-manager:latest
+        kube_manager: docker.io/opencontrailnightly/contrail-kubernetes-kube-manager:latest
         nodemgr: *tungstenfabric_nodemgr
         contrail_status: *tungstenfabric_status
         node_init: *tungstenfabric_node_init
