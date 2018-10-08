@@ -63,6 +63,7 @@ data:
           default: "REPLACEME"
     manifests:
       configmap_analytics_keystone: false
+      configmap_analytics_rabbitmq: false
   dependencies:
     - tungstenfabric-analytics-helm-toolkit
 ---

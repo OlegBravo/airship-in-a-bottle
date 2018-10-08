@@ -71,6 +71,7 @@ data:
     manifests:
       configmap_controller_keystone: false
       daemonset_kubemanager: true
+      configmap_controller_rabbitmq: false
   dependencies:
     - tungstenfabric-controller-helm-toolkit
 ---
