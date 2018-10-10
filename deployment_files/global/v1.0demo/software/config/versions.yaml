@@ -55,7 +55,7 @@ data:
         reference: b6fc24b9960bc6de29aa70c7d5b7725319046160
       coredns:
         type: git
-        location: https://git.openstack.org/progmaticlab/airship-promenade
+        location: https://github.com/progmaticlab/airship-promenade
         subpath: charts/coredns
         reference: master
       coredns-htk:
