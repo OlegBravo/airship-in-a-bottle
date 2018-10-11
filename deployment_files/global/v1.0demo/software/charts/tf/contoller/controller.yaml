@@ -34,6 +34,12 @@ metadata:
         name: common-addresses
         path: .tungstenfabric.ip
       dest:
+        path: .values.global.contrail_env.KUBERNETES_API_SERVER
+    - src:
+        schema: pegleg/CommonAddresses/v1
+        name: common-addresses
+        path: .tungstenfabric.ip
+      dest:
         path: .values.endpoints.rabbitmq.hosts.default
 data:
   chart_name: controller
@@ -51,6 +57,7 @@ data:
         CLOUD_ORCHESTRATOR: "none"
         AAA_MODE: "no-auth"
         AUTH_MODE: "noauth"
+        KUBERNETES_API_SECURE_PORT: "6443"
     labels:
       control:
         node_selector_key: tungstenfabric-controller
