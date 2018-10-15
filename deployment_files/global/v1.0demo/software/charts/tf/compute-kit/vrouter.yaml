@@ -61,6 +61,7 @@ data:
         LOG_LEVEL: SYS_DEBUG
         CLOUD_ORCHESTRATOR: openstack
         VROUTER_ENCRYPTION: FALSE
+        KUBERNETES_API_SECURE_PORT: "6443"
     labels:
       vrouter_agent_kernel:
         node_selector_key: tungstenfabric-compute-kit
