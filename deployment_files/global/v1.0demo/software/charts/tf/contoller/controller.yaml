@@ -35,12 +35,6 @@ metadata:
         path: .tungstenfabric.ip
       dest:
         path: .values.global.contrail_env.KUBERNETES_API_SERVER
-    - src:
-        schema: pegleg/CommonAddresses/v1
-        name: common-addresses
-        path: .tungstenfabric.ip
-      dest:
-        path: .values.endpoints.rabbitmq.hosts.default
 data:
   chart_name: controller
   release: contrail-controller
@@ -57,7 +51,6 @@ data:
         CLOUD_ORCHESTRATOR: "none"
         AAA_MODE: "no-auth"
         AUTH_MODE: "noauth"
-        KUBERNETES_API_SECURE_PORT: "6443"
         KUBERNETES_IP_FABRIC_SNAT: "true"
     labels:
       control:
@@ -72,10 +65,6 @@ data:
       kube_manager:
         node_selector_key: tungstenfabric-controller
         node_selector_value: enabled
-    endpoints:
-      rabbitmq:
-        hosts:
-          default: "REPLACEME"
     manifests:
       configmap_controller_keystone: false
       daemonset_kube_manager: true
