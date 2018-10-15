@@ -193,6 +193,7 @@ data:
   hostcidr: ${HOSTCIDR}
   interface: ${NODE_NET_IFACE}
   interface_gw: ${NODE_NET_IFACE_GATEWAY_IP}
+  subnets: ${NODE_SUBNETS}
 EOF
 }
 

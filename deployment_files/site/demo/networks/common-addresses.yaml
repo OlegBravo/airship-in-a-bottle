@@ -68,9 +68,9 @@ metadata:
     - src:
         schema: dev/Configurables/v1
         name: dev-configurables
-        path: .hostcidr
+        path: .subnets
       dest:
-        path: .tungstenfabric.cidr
+        path: .tungstenfabric.fabric_subnets
     - src:
         schema: dev/Configurables/v1
         name: dev-configurables
@@ -144,7 +144,7 @@ data:
 
   tungstenfabric:
     ip: REPLACEME
-    cidr: REPLACEME
+    fabric_subnets: REPLACEME
     interface: REPLACEME
     interface_gw: REPLACE_ME
 
