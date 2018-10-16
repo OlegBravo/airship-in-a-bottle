@@ -59,7 +59,7 @@ data:
         AUTH_MODE: "noauth"
         KUBERNETES_IP_FABRIC_SNAT: "true"
         KUBERNETES_API_SECURE_PORT: "6443"
-        DIST_SNAT_PROTO_PORT_LIST: "tcp:10240,udp:10240"
+        DIST_SNAT_PROTO_PORT_LIST: "tcp:1024,udp:1024"
     labels:
       control:
         node_selector_key: tungstenfabric-controller
