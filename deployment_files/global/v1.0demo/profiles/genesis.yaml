@@ -66,9 +66,9 @@ data:
     target_manifest: cluster-bootstrap
   labels:
     dynamic:
-      - calico-etcd=enabled
+      - calico-etcd=disabled
       - coredns=enabled
-      - kube-ingress=enabled
+      - kube-ingress=disabled
       - kubernetes-apiserver=enabled
       - kubernetes-controller-manager=enabled
       - kubernetes-etcd=enabled
@@ -77,14 +77,14 @@ data:
       - openstack-control-plane=enabled
       - openvswitch=enabled
       - promenade-genesis=enabled
-      - ucp-control-plane=enabled
+      - ucp-control-plane=disabled
       - ceph-mon=enabled
       - ceph-mds=enabled
       - ceph-osd=enabled
       - ceph-rgw=enabled
       - ceph-mgr=enabled
-      - tungstenfabric-controller=disabled
-      - tungstenfabric-compute-kit=disabled
+      - tungstenfabric-controller=enabled
+      - tungstenfabric-compute-kit=enabled
   files:
     - path: /var/lib/anchor/calico-etcd-bootstrap
       content: "# placeholder for triggering calico etcd bootstrapping\n# this file will be deleted"
