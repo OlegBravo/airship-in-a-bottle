@@ -41,12 +41,6 @@ metadata:
         path: tungstenfabric.interface_gw
       dest:
         path: .values.global.contrail_env.VROUTER_GATEWAY
-    - src:
-        schema: pegleg/CommonAddresses/v1
-        name: common-addresses
-        path: .tungstenfabric.ip
-      dest:
-        path: .values.global.contrail_env.KUBERNETES_API_SERVER
 data:
   chart_name: vrouter
   release: contrail-vrouter
@@ -61,7 +55,6 @@ data:
         LOG_LEVEL: SYS_DEBUG
         CLOUD_ORCHESTRATOR: openstack
         VROUTER_ENCRYPTION: FALSE
-        KUBERNETES_API_SECURE_PORT: "6443"
     labels:
       vrouter_agent_kernel:
         node_selector_key: tungstenfabric-compute-kit
