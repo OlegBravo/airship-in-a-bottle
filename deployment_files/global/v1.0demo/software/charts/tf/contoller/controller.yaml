@@ -51,7 +51,6 @@ data:
         CLOUD_ORCHESTRATOR: "none"
         AAA_MODE: "no-auth"
         AUTH_MODE: "noauth"
-        KUBERNETES_IP_FABRIC_FORWARDING: "true"
         KUBERNETES_IP_FABRIC_SNAT: "true"
         DIST_SNAT_PROTO_PORT_LIST: "tcp:1-1024,udp:1-1024"
     labels:
