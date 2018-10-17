@@ -10,23 +10,23 @@ metadata:
 data:
   release_prefix: airship
   chart_groups:
-#    - kubernetes-proxy
+    - kubernetes-proxy
 #    - kubernetes-container-networking
     - tungstenfabric-controller
     - tungstenfabric-compute-kit
     - kubernetes-dns
     - kubernetes-etcd
     - kubernetes-core
-#    - ingress-kube-system
-#    - ucp-storage-provisioner
-#    - ucp-core
-#    - ucp-keystone
-## TODO(bryan-strassner)
-## Excluding diving bell for now - crash loop on uamlite in this env
-## might be missing configuration, might be a symptom of running in a VM
-## same change in bootstrap manifest.
-##    - ucp-divingbell
-#    - ucp-services
+    - ingress-kube-system
+    - ucp-storage-provisioner
+    - ucp-core
+    - ucp-keystone
+# TODO(bryan-strassner)
+# Excluding diving bell for now - crash loop on uamlite in this env
+# might be missing configuration, might be a symptom of running in a VM
+# same change in bootstrap manifest.
+#    - ucp-divingbell
+    - ucp-services
     - openstack-ingress-controller
     - openstack-component-infrastructure
     - openstack-component-shared

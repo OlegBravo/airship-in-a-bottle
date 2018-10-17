@@ -68,7 +68,7 @@ data:
     dynamic:
       - calico-etcd=disabled
       - coredns=enabled
-      - kube-ingress=disabled
+      - kube-ingress=enabled
       - kubernetes-apiserver=enabled
       - kubernetes-controller-manager=enabled
       - kubernetes-etcd=enabled
@@ -77,7 +77,7 @@ data:
       - openstack-control-plane=enabled
       - openvswitch=enabled
       - promenade-genesis=enabled
-      - ucp-control-plane=disabled
+      - ucp-control-plane=enabled
       - ceph-mon=enabled
       - ceph-mds=enabled
       - ceph-osd=enabled
