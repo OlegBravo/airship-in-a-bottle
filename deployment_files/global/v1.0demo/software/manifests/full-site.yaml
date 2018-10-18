@@ -10,7 +10,7 @@ metadata:
 data:
   release_prefix: airship
   chart_groups:
-#    - kubernetes-proxy
+    - kubernetes-proxy
 #    - kubernetes-container-networking
     - tungstenfabric-controller
     - tungstenfabric-compute-kit
