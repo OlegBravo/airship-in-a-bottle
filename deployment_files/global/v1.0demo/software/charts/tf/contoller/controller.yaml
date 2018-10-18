@@ -62,7 +62,7 @@ data:
       contrail_env:
         LOG_LEVEL: SYS_DEBUG
         BGP_PORT: "1179"
-        CLOUD_ORCHESTRATOR: "none"
+        CLOUD_ORCHESTRATOR: "kubernetes"
         AAA_MODE: "no-auth"
         AUTH_MODE: "noauth"
         KUBERNETES_IP_FABRIC_SNAT: "true"

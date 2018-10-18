@@ -44,7 +44,7 @@ data:
         JVM_EXTRA_OPTS: "-Xms1g -Xmx2g"
         CONFIG_DATABASE_NODEMGR__DEFAULTS__minimum_diskGB: "2"
         DATABASE_NODEMGR__DEFAULTS__minimum_diskGB: "2"
-        CLOUD_ORCHESTRATOR: "none"
+        CLOUD_ORCHESTRATOR: "kubernetes"
         AAA_MODE: "no-auth"
         AUTH_MODE: "noauth"
     labels:

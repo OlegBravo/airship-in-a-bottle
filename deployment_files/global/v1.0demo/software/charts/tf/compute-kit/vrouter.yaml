@@ -53,7 +53,7 @@ data:
     global:
       contrail_env:
         LOG_LEVEL: SYS_DEBUG
-        CLOUD_ORCHESTRATOR: openstack
+        CLOUD_ORCHESTRATOR: kubernetes
         VROUTER_ENCRYPTION: FALSE
     labels:
       vrouter_agent_kernel:
