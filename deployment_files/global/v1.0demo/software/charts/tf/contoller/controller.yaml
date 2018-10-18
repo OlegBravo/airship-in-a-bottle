@@ -35,6 +35,20 @@ metadata:
         path: .tungstenfabric.fabric_subnets
       dest:
         path: .values.global.contrail_env.KUBERNETES_IP_FABRIC_SUBNETS
+
+    # IP addresses
+    - src:
+        schema: pegleg/CommonAddresses/v1
+        name: common-addresses
+        path: .kubernetes.pod_cidr
+      dest:
+        path: .values.global.contrail_env.KUBERNETES_POD_SUBNETS
+    - src:
+        schema: pegleg/CommonAddresses/v1
+        name: common-addresses
+        path: .kubernetes.service_cidr
+      dest:
+        path: .values.global.contrail_env.KUBERNETES_SERVICE_SUBNETS
 data:
   chart_name: controller
   release: contrail-controller
