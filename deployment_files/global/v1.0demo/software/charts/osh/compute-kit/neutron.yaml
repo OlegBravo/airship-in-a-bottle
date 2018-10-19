@@ -22,6 +22,12 @@ metadata:
         path: .images.osh.neutron
       dest:
         path: .values.images.tags
+    - src:
+        schema: pegleg/CommonAddresses/v1
+        name: common-addresses
+        path: .tungstenfabric.ip
+      dest:
+        path: .values.conf.plugins.tungstenfabric.APISERVER.api_server_ip
 data:
   chart_name: neutron
   release: neutron
@@ -80,6 +86,8 @@ data:
         node_selector_key: openstack-control-plane
         node_selector_value: enabled
     network:
+      backend:
+        - tungstenfabric
       interface:
         tunnel: docker0
     conf:
@@ -91,6 +99,9 @@ data:
           l3_ha_network_type: vxlan
           dhcp_agents_per_network: 1
       plugins:
+        tungstenfabric:
+          APISERVER:
+            api_server_ip: config-api-server.tf
         ml2_conf:
           ml2_type_flat:
             flat_networks: public
