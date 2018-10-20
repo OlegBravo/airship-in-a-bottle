@@ -95,7 +95,7 @@ metadata:
 data:
   dns:
     bootstrap_validation_checks:
-      - calico-etcd.kube-system.svc.cluster.local
+#      - calico-etcd.kube-system.svc.cluster.local
       - kubernetes-etcd.kube-system.svc.cluster.local
       - kubernetes.default.svc.cluster.local
 ...
