@@ -12,6 +12,6 @@ data:
   sequenced: False
   chart_group:
     - libvirt
-    - openvswitch
+#    - openvswitch
     - nova
     - neutron

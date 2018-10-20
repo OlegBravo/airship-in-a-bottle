@@ -75,7 +75,7 @@ data:
       - kubernetes-scheduler=enabled
       - openstack-compute-node=enabled
       - openstack-control-plane=enabled
-      - openvswitch=enabled
+      - openvswitch=disabled
       - promenade-genesis=enabled
       - ucp-control-plane=enabled
       - ceph-mon=enabled

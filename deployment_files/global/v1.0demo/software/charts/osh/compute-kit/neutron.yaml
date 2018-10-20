@@ -76,9 +76,9 @@ data:
       lb:
         node_selector_key: linuxbridge
         node_selector_value: enabled
-      ovs:
-        node_selector_key: openvswitch
-        node_selector_value: enabled
+#      ovs:
+#        node_selector_key: openvswitch
+#        node_selector_value: enabled
       server:
         node_selector_key: openstack-control-plane
         node_selector_value: enabled
@@ -93,26 +93,23 @@ data:
     conf:
       neutron:
         DEFAULT:
+          core_plugin: neutron_plugin_contrail.plugins.opencontrail.contrail_plugin.NeutronPluginContrailCoreV2
+          service_plugins: neutron_plugin_contrail.plugins.opencontrail.loadbalancer.v2.plugin.LoadBalancerPluginV2
           l3_ha: False
-          min_l3_agents_per_router: 1
-          max_l3_agents_per_router: 1
-          l3_ha_network_type: vxlan
-          dhcp_agents_per_network: 1
+          api_extensions_path: /opt/plugin/site-packages/neutron_plugin_contrail/extensions:/opt/plugin/site-packages/neutron_lbaas/extensions
+          interface_driver: null
+        quotas:
+          quota_driver: neutron_plugin_contrail.plugins.opencontrail.quota.driver.QuotaDriver
       plugins:
         tungstenfabric:
           APISERVER:
             api_server_ip: config-api-server.tf
-        ml2_conf:
-          ml2_type_flat:
-            flat_networks: public
-        openvswitch_agent:
-          agent:
-            tunnel_types: vxlan
-          ovs:
-            bridge_mappings: public:br-ex
-        linuxbridge_agent:
-          linux_bridge:
-            bridge_mappings: public:br-ex
+    manifests:
+      daemonset_dhcp_agent: false
+      daemonset_l3_agent: false
+      daemonset_lb_agent: false
+      daemonset_metadata_agent: false
+      daemonset_ovs_agent: false
   dependencies:
     - openstack-neutron-helm-toolkit
 ---
