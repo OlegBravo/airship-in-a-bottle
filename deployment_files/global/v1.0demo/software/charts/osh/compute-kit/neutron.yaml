@@ -22,12 +22,6 @@ metadata:
         path: .images.osh.neutron
       dest:
         path: .values.images.tags
-    - src:
-        schema: pegleg/CommonAddresses/v1
-        name: common-addresses
-        path: .tungstenfabric.ip
-      dest:
-        path: .values.conf.plugins.tungstenfabric.APISERVER.api_server_ip
 data:
   chart_name: neutron
   release: neutron
@@ -103,7 +97,7 @@ data:
       plugins:
         tungstenfabric:
           APISERVER:
-            api_server_ip: config-api-server.tf
+            api_server_ip: config-api-server.tf.svc.cluster.local
     manifests:
       daemonset_dhcp_agent: false
       daemonset_l3_agent: false
