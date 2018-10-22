@@ -27,7 +27,7 @@ metadata:
         name: common-addresses
         path: .tungstenfabric.ip
       dest:
-        path: .values.conf.plugins.tungstenfabric.APISERVER
+        path: .values.conf.plugins.tungstenfabric.APISERVER.api_server_ip
 data:
   chart_name: neutron
   release: neutron
