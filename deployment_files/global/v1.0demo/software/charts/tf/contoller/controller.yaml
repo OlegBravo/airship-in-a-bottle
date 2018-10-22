@@ -64,7 +64,7 @@ data:
         BGP_PORT: "1179"
         CLOUD_ORCHESTRATOR: "kubernetes"
         AAA_MODE: "no-auth"
-        AUTH_MODE: "noauth"
+        AUTH_MODE: "keystone"
         KUBERNETES_IP_FABRIC_SNAT: "true"
         DIST_SNAT_PROTO_PORT_LIST: "tcp:1024,udp:1024"
     labels:
