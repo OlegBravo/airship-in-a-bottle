@@ -22,6 +22,12 @@ metadata:
         path: .images.osh.neutron
       dest:
         path: .values.images.tags
+    - src:
+        schema: pegleg/CommonAddresses/v1
+        name: common-addresses
+        path: .tungstenfabric.ip
+      dest:
+        path: .values.conf.plugins.tungstenfabric.APISERVER
 data:
   chart_name: neutron
   release: neutron
@@ -54,25 +60,9 @@ data:
             component: ks-endpoints
   values:
     labels:
-      agent:
-        dhcp:
-          node_selector_key: openstack-control-plane
-          node_selector_value: enabled
-        l3:
-          node_selector_key: openstack-control-plane
-          node_selector_value: enabled
-        metadata:
-          node_selector_key: openstack-control-plane
-          node_selector_value: enabled
       job:
         node_selector_key: openstack-control-plane
         node_selector_value: enabled
-      lb:
-        node_selector_key: linuxbridge
-        node_selector_value: enabled
-#      ovs:
-#        node_selector_key: openvswitch
-#        node_selector_value: enabled
       server:
         node_selector_key: openstack-control-plane
         node_selector_value: enabled
@@ -82,8 +72,6 @@ data:
     network:
       backend:
         - tungstenfabric
-      interface:
-        tunnel: docker0
     conf:
       neutron:
         DEFAULT:
@@ -104,6 +92,7 @@ data:
       daemonset_lb_agent: false
       daemonset_metadata_agent: false
       daemonset_ovs_agent: false
+      daemonset_sriov_agent: false
   dependencies:
     - openstack-neutron-helm-toolkit
 ---
