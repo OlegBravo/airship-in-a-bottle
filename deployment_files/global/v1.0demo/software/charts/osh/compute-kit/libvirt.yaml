@@ -36,6 +36,9 @@ data:
         libvirt:
           node_selector_key: openstack-compute-node
           node_selector_value: enabled
+    network:
+      backend:
+        - tungstenfabric
     conf:
       ceph:
         enabled: false

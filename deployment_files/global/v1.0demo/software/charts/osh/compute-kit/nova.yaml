@@ -111,6 +111,9 @@ data:
       test:
         node_selector_key: openstack-control-plane
         node_selector_value: enabled
+    network:
+      backend:
+        - tungstenfabric
     conf:
       ceph:
         enabled: false
