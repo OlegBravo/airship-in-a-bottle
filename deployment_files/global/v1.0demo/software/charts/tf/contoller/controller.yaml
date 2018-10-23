@@ -64,9 +64,19 @@ data:
         BGP_PORT: "1179"
         CLOUD_ORCHESTRATOR: "kubernetes"
         AAA_MODE: "no-auth"
-        AUTH_MODE: "keystone"
         KUBERNETES_IP_FABRIC_SNAT: "true"
         DIST_SNAT_PROTO_PORT_LIST: "tcp:1024,udp:1024"
+        AUTH_MODE: "keystone"
+        KEYSTONE_AUTH_ADMIN_PASSWORD: "password"
+        KEYSTONE_AUTH_ADMIN_TENANT: "admin"
+        KEYSTONE_AUTH_ADMIN_USER: "admin"
+        KEYSTONE_AUTH_HOST: "keystone.openstack.svc.cluster.local"
+        KEYSTONE_AUTH_ADMIN_PORT: "80"
+        KEYSTONE_AUTH_PROTO: "http"
+        KEYSTONE_AUTH_URL_VERSION: "/v3"
+        KEYSTONE_AUTH_USER_DOMAIN_NAME: "default"
+        KEYSTONE_AUTH_PROJECT_DOMAIN_NAME: "default"
+        KEYSTONE_AUTH_REGION_NAME: "RegionOne"
     labels:
       control:
         node_selector_key: tungstenfabric-controller
