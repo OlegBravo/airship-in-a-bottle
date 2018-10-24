@@ -42,6 +42,8 @@ data:
     conf:
       ceph:
         enabled: false
+      qemu:
+        cgroup_device_acl: ["/dev/null", "/dev/full", "/dev/zero", "/dev/random", "/dev/urandom", "/dev/ptmx", "/dev/kvm", "/dev/kqemu", "/dev/rtc", "/dev/hpet", "/dev/net/tun"]
   dependencies:
     - openstack-libvirt-helm-toolkit
 ---
