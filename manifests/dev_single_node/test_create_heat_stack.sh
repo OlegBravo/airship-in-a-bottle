@@ -35,7 +35,12 @@ env -i ./run_openstack_cli.sh keypair create heat-vm-key > id_rsa
 chmod 600 id_rsa
 
 printf "Downloading heat-public-net-deployment.yaml\n"
-curl -LO https://raw.githubusercontent.com/openstack/openstack-helm/master/tools/gate/files/heat-public-net-deployment.yaml
+for ((i=0; i<5; i++)) ; do echo $i ; done
+  if curl -LO https://raw.githubusercontent.com/openstack/openstack-helm/master/tools/gate/files/heat-public-net-deployment.yaml ; then
+    break
+  fi
+  sleep 2
+fi
 
 printf "Creating public-net Heat Stack\n"
 env -i ./run_openstack_cli.sh stack create --wait \

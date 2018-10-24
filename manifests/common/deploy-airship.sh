@@ -414,5 +414,7 @@ fi
 
 # demo
 if [[ ${STEP_BREAKPOINT} -ge 40 ]]; then
+  cid=`docker ps | awk '/config-api/{print $1}'`
+  docker restart $cid && sleep 10
   execute_create_heat_stack || error "creating heat stack"
 fi
