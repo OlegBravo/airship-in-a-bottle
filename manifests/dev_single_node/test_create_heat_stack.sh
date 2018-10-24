@@ -40,7 +40,7 @@ for ((i=0; i<5; i++)) ; do echo $i ; done
     break
   fi
   sleep 2
-fi
+done
 
 printf "Creating public-net Heat Stack\n"
 env -i ./run_openstack_cli.sh stack create --wait \
