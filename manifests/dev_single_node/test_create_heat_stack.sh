@@ -35,7 +35,7 @@ env -i ./run_openstack_cli.sh keypair create heat-vm-key > id_rsa
 chmod 600 id_rsa
 
 printf "Downloading heat-public-net-deployment.yaml\n"
-for ((i=0; i<5; i++)) ; do echo $i ; done
+for ((i=0; i<5; i++)) ; do
   if curl -LO https://raw.githubusercontent.com/openstack/openstack-helm/master/tools/gate/files/heat-public-net-deployment.yaml ; then
     break
   fi
@@ -61,17 +61,22 @@ env -i ./run_openstack_cli.sh stack list
 printf "Nova Server List\n"
 env -i ./run_openstack_cli.sh server list
 
-FLOATING_IP=$(env -i ./run_openstack_cli.sh stack output show \
-    test-stack-01 \
-    floating_ip \
-    -f value -c output_value)
+#FLOATING_IP=$(env -i ./run_openstack_cli.sh stack output show \
+#    test-stack-01 \
+#    floating_ip \
+#    -f value -c output_value)
 
-printf "Configuring required network settings\n"
-sudo ip addr add ${OSH_BR_EX_ADDR} dev br-ex
-sudo ip link set br-ex up
-sudo iptables -P FORWARD ACCEPT
-DEFAULT_ROUTE_DEV="$(sudo ip -4 route list 0/0 | awk '{ print $5; exit }')"
-sudo iptables -t nat -A POSTROUTING -o ${DEFAULT_ROUTE_DEV} -s ${OSH_EXT_SUBNET} -j MASQUERADE
+#printf "Configuring required network settings\n"
+#sudo ip addr add ${OSH_BR_EX_ADDR} dev br-ex
+#sudo ip link set br-ex up
+#sudo iptables -P FORWARD ACCEPT
+#DEFAULT_ROUTE_DEV="$(sudo ip -4 route list 0/0 | awk '{ print $5; exit }')"
+#sudo iptables -t nat -A POSTROUTING -o ${DEFAULT_ROUTE_DEV} -s ${OSH_EXT_SUBNET} -j MASQUERADE
+
+# get link local IP in case if Tungstenfabric
+iip=`env -i ./run_openstack_cli.sh server show 6f224577-2768-41e0-8ac8-8da7c2464001 | awk '/addresses/{print $4}' | cut -d '=' -f 2 | cut -d ',' -f 1`
+if_name=`vif --list | grep -B 1 "10.11.11.2" | head -1 | awk '{print $3}'`
+FLOATING_IP=`curl -s http://127.0.0.1:8085/Snh_ItfReq?name=$if_name | sed 's/^.*<mdata_ip_addr.*>\([0-9\.]*\)<.mdata_ip_addr>.*$/\1/'`
 
 function wait_for_ssh_port {
   # Default wait timeout is 300 seconds
