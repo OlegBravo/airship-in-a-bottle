@@ -54,7 +54,7 @@ data:
     global:
       contrail_env:
         LOG_LEVEL: SYS_DEBUG
-        JVM_EXTRA_OPTS: "-Xms1g -Xmx2g"
+        JVM_EXTRA_OPTS: "-Xms3g -Xmx4g"
         CONFIG_DATABASE_NODEMGR__DEFAULTS__minimum_diskGB: "2"
         DATABASE_NODEMGR__DEFAULTS__minimum_diskGB: "2"
         CLOUD_ORCHESTRATOR: "kubernetes"
