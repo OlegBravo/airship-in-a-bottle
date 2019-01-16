@@ -192,12 +192,9 @@ data:
   hostip: ${HOSTIP}
   hostcidr: ${HOSTCIDR}
   interface: ${NODE_NET_IFACE}
-<<<<<<< HEAD
   interface_gw: ${NODE_NET_IFACE_GATEWAY_IP}
   subnets: ${NODE_SUBNETS}
-=======
   maas-ingress: '192.169.1.5/32'
->>>>>>> github/master
 EOF
 }
 
