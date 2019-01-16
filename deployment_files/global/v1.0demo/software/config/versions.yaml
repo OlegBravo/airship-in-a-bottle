@@ -84,8 +84,8 @@ data:
         subpath: helm-toolkit
         type: git
       ingress:
-        location: https://git.openstack.org/openstack/openstack-helm-infra
-        reference: 5ac56d93074fe72313cd2d3c1117350a73281202
+        location: https://github.com/progmaticlab/openstack-helm-infra
+        reference: airship
         subpath: ingress
         type: git
       ingress-htk:
