@@ -3,6 +3,8 @@ schema: pegleg/EndpointCatalogue/v1
 metadata:
     schema: metadata/Document/v1
     name: ucp_endpoints
+    labels:
+      name: ucp_endpoints
     layeringDefinition:
         abstract: false
         layer: global
@@ -119,19 +121,18 @@ data:
         api:
           default: 9000
           nodeport: 31900
+          public: 80
       path:
         default: /api/v1.0
       scheme:
         default: http
       host_fqdn_override:
         default: null
-    maas_region_ui:
-      name: maas-region-ui
+    maas_region:
+      name: maas-region
       hosts:
-        default: maas-region-ui
-        public: maas
-      path:
-        default: /MAAS
+        default: maas-region
+        public: maas-region
       scheme:
         default: "http"
       port:
@@ -140,6 +141,24 @@ data:
           public: 80
       host_fqdn_override:
         default: null
+    maas_ingress:
+      hosts:
+        default: maas-ingress
+        error_pages: maas-ingress-error
+      host_fqdn_override:
+        public: null
+      port:
+        http:
+          default: 80
+        https:
+          default: 443
+        error_pages:
+          default: 8080
+          podport: 8080
+        healthz:
+          podport: 10259
+        status:
+          podport: 18089
     kubernetesprovisioner:
       name: promenade
       hosts:

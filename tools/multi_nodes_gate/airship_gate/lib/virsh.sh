@@ -51,6 +51,8 @@ iso_gen() {
     fi
 
     envsubst < "${TEMPLATE_DIR}/meta-data.sub" > meta-data
+
+    export DNS_SERVERS=$(join_array ',' $UPSTREAM_DNS)
     envsubst < "${TEMPLATE_DIR}/network-config.sub" > network-config
 
     {
@@ -84,14 +86,14 @@ iso_path() {
 
 net_clean() {
     if virsh net-list --name | grep ^airship_gate$ > /dev/null; then
-        log Destroying UCP gate network
+        log Destroying Airship gate network
         virsh net-destroy "${XML_DIR}/network.xml" &>> "${LOG_FILE}"
     fi
 }
 
 net_declare() {
     if ! virsh net-list --name | grep ^airship_gate$ > /dev/null; then
-        log Creating UCP gate network
+        log Creating Airship gate network
         virsh net-create "${XML_DIR}/network.xml" &>> "${LOG_FILE}"
     fi
 }
@@ -117,11 +119,11 @@ vm_clean() {
 }
 
 vm_clean_all() {
-    log Removing all VMs in parallel
+    log Removing all VMs
     VM_NAMES=($(config_vm_names))
     for NAME in ${VM_NAMES[*]}
     do
-        vm_clean "${NAME}" &
+        vm_clean "${NAME}"
     done
     wait
 }
@@ -129,7 +131,16 @@ vm_clean_all() {
 vm_create() {
     NAME=${1}
     MAC_ADDRESS=$(config_vm_mac "${NAME}")
-    DISK_OPTS="bus=virtio,cache=directsync,discard=unmap,format=qcow2"
+    IO_PROF=$(config_vm_io "${NAME}")
+    if [[ "$IO_PROF" == "fast" ]]
+    then
+      DISK_OPTS="bus=virtio,cache=none,format=qcow2,io=native"
+    elif [[ "$IO_PROF" == "safe" ]]
+    then
+      DISK_OPTS="bus=virtio,cache=directsync,discard=unmap,format=qcow2,io=native"
+    else
+      DISK_OPTS="bus=virtio,format=qcow2"
+    fi
     vol_create_root "${NAME}"
     wait
 
@@ -141,7 +152,7 @@ vm_create() {
         virt-install \
             --name "${NAME}" \
             --virt-type kvm \
-            --cpu host \
+            --cpu ${VIRSH_CPU_OPTS} \
             --graphics vnc,listen=0.0.0.0 \
             --noautoconsole \
             --network "network=airship_gate,model=virtio" \
@@ -153,14 +164,15 @@ vm_create() {
             --disk "vol=${VIRSH_POOL}/cloud-init-${NAME}.iso,device=cdrom" &>> "${LOG_FILE}"
 
         ssh_wait "${NAME}"
-        ssh_cmd "${NAME}" sync
+	ssh_cmd "${NAME}" cloud-init status --wait
+	ssh_cmd "${NAME}" sync
 
     else
         log Creating VM "${NAME}"
         virt-install \
             --name "${NAME}" \
             --virt-type kvm \
-            --cpu host \
+            --cpu ${VIRSH_CPU_OPTS} \
             --graphics vnc,listen=0.0.0.0 \
             --noautoconsole \
             --network "network=airship_gate,model=virtio" \
@@ -172,18 +184,24 @@ vm_create() {
     fi
 }
 
+vm_create_validate() {
+    NAME=${1}
+    vm_create "${name}"
+    if [[ "$(config_vm_bootstrap ${name})" == "true" ]]
+    then
+      vm_validate "${name}"
+    fi
+}
+
 vm_create_all() {
     log Starting all VMs
 
     VM_NAMES=($(config_vm_names))
     for name in ${VM_NAMES[*]}
     do
-      vm_create "${name}"
-      if [[ "$(config_vm_bootstrap ${name})" == "true" ]]
-      then
-        vm_validate "${name}"
-      fi
+      vm_create_validate "${name}" &
     done
+    wait
 }
 
 vm_start() {

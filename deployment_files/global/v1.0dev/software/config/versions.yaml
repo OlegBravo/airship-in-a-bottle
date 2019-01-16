@@ -17,123 +17,123 @@ data:
           type: git
           location: https://git.openstack.org/openstack/airship-promenade
           subpath: charts/etcd
-          reference: 88c786b8e92d053fd0cba7237df68cc087b81f26
+          reference: 425d8bdff8b5fb9aadd22bfbf6de727986e7abe0
         etcd-htk:
           type: git
           location: https://git.openstack.org/openstack/openstack-helm-infra
           subpath: helm-toolkit
-          reference: b6fc24b9960bc6de29aa70c7d5b7725319046160
+          reference: 5d356f9265b337b75f605dee839faa8cd0ed3ab2
         calico:
           type: git
           location: https://git.openstack.org/openstack/openstack-helm-infra
           subpath: calico
-          reference: b6fc24b9960bc6de29aa70c7d5b7725319046160
+          reference: 5d356f9265b337b75f605dee839faa8cd0ed3ab2
         calico-htk:
           type: git
           location: https://git.openstack.org/openstack/openstack-helm-infra
           subpath: helm-toolkit
-          reference: b6fc24b9960bc6de29aa70c7d5b7725319046160
+          reference: 5d356f9265b337b75f605dee839faa8cd0ed3ab2
       apiserver:
         type: git
         location: https://git.openstack.org/openstack/airship-promenade
         subpath: charts/apiserver
-        reference: 88c786b8e92d053fd0cba7237df68cc087b81f26
+        reference: cfb8aa498c294c2adbc369ba5aaee19b49550d22
       apiserver-htk:
         type: git
         location: https://git.openstack.org/openstack/openstack-helm-infra
         subpath: helm-toolkit
-        reference: b6fc24b9960bc6de29aa70c7d5b7725319046160
+        reference: 5d356f9265b337b75f605dee839faa8cd0ed3ab2
       controller-manager:
         type: git
         location: https://git.openstack.org/openstack/airship-promenade
         subpath: charts/controller_manager
-        reference: 88c786b8e92d053fd0cba7237df68cc087b81f26
+        reference: 425d8bdff8b5fb9aadd22bfbf6de727986e7abe0
       controller-manager-htk:
         type: git
         location: https://git.openstack.org/openstack/openstack-helm-infra
         subpath: helm-toolkit
-        reference: b6fc24b9960bc6de29aa70c7d5b7725319046160
+        reference: 5d356f9265b337b75f605dee839faa8cd0ed3ab2
       coredns:
         type: git
         location: https://git.openstack.org/openstack/airship-promenade
         subpath: charts/coredns
-        reference: 88c786b8e92d053fd0cba7237df68cc087b81f26
+        reference: 425d8bdff8b5fb9aadd22bfbf6de727986e7abe0
       coredns-htk:
         type: git
         location: https://git.openstack.org/openstack/openstack-helm-infra
         subpath: helm-toolkit
-        reference: b6fc24b9960bc6de29aa70c7d5b7725319046160
+        reference: 5d356f9265b337b75f605dee839faa8cd0ed3ab2
       haproxy:
         type: git
         location: https://git.openstack.org/openstack/airship-promenade
         subpath: charts/haproxy
-        reference: 88c786b8e92d053fd0cba7237df68cc087b81f26
+        reference: 425d8bdff8b5fb9aadd22bfbf6de727986e7abe0
       haproxy-htk:
         type: git
         location: https://git.openstack.org/openstack/openstack-helm-infra
         subpath: helm-toolkit
-        reference: b6fc24b9960bc6de29aa70c7d5b7725319046160
+        reference: 5d356f9265b337b75f605dee839faa8cd0ed3ab2
       etcd:
         type: git
         location: https://git.openstack.org/openstack/airship-promenade
         subpath: charts/etcd
-        reference: 88c786b8e92d053fd0cba7237df68cc087b81f26
+        reference: 425d8bdff8b5fb9aadd22bfbf6de727986e7abe0
       etcd-htk:
         type: git
         location: https://git.openstack.org/openstack/openstack-helm-infra
         subpath: helm-toolkit
-        reference: b6fc24b9960bc6de29aa70c7d5b7725319046160
+        reference: 5d356f9265b337b75f605dee839faa8cd0ed3ab2
       ingress:
         type: git
         location: https://git.openstack.org/openstack/openstack-helm-infra
         subpath: ingress
-        reference: b6fc24b9960bc6de29aa70c7d5b7725319046160
+        reference: 5d356f9265b337b75f605dee839faa8cd0ed3ab2
       ingress-htk:
         type: git
         location: https://git.openstack.org/openstack/openstack-helm-infra
         subpath: helm-toolkit
-        reference: b6fc24b9960bc6de29aa70c7d5b7725319046160
+        reference: 5d356f9265b337b75f605dee839faa8cd0ed3ab2
       proxy:
         type: git
         location: https://git.openstack.org/openstack/airship-promenade
         subpath: charts/proxy
-        reference: 88c786b8e92d053fd0cba7237df68cc087b81f26
+        reference: 425d8bdff8b5fb9aadd22bfbf6de727986e7abe0
       proxy-htk:
         type: git
         location: https://git.openstack.org/openstack/openstack-helm-infra
         subpath: helm-toolkit
-        reference: b6fc24b9960bc6de29aa70c7d5b7725319046160
+        reference: 5d356f9265b337b75f605dee839faa8cd0ed3ab2
       scheduler:
         type: git
         location: https://git.openstack.org/openstack/airship-promenade
         subpath: charts/scheduler
-        reference: 88c786b8e92d053fd0cba7237df68cc087b81f26
+        reference: 425d8bdff8b5fb9aadd22bfbf6de727986e7abe0
       scheduler-htk:
         type: git
         location: https://git.openstack.org/openstack/openstack-helm-infra
         subpath: helm-toolkit
-        reference: b6fc24b9960bc6de29aa70c7d5b7725319046160
+        reference: 5d356f9265b337b75f605dee839faa8cd0ed3ab2
     ucp:
       nfs_provisioner:
         type: git
         location: https://git.openstack.org/openstack/openstack-helm-infra
         subpath: nfs-provisioner
-        reference: b6fc24b9960bc6de29aa70c7d5b7725319046160
+        reference: 5d356f9265b337b75f605dee839faa8cd0ed3ab2
       nfs_htk:
         type: git
         location: https://git.openstack.org/openstack/openstack-helm-infra
         subpath: helm-toolkit
-        reference: b6fc24b9960bc6de29aa70c7d5b7725319046160
+        reference: 5d356f9265b337b75f605dee839faa8cd0ed3ab2
       armada:
         type: git
         location: https://git.openstack.org/openstack/airship-armada
         subpath: charts/armada
-        reference: 9c3ebe68c76c62244d52a7f5ceffc2e955970290
+        reference: 709eb9ec9b78b76fd18b817ae6c7a32221e9d0c4
       armada-htk:
         type: git
         location: https://git.openstack.org/openstack/openstack-helm-infra
         subpath: helm-toolkit
-        reference: b6fc24b9960bc6de29aa70c7d5b7725319046160
+        reference: 5d356f9265b337b75f605dee839faa8cd0ed3ab2
       barbican:
         type: git
         location: https://git.openstack.org/openstack/openstack-helm
@@ -143,7 +143,7 @@ data:
         type: git
         location: https://git.openstack.org/openstack/openstack-helm-infra
         subpath: helm-toolkit
-        reference: b6fc24b9960bc6de29aa70c7d5b7725319046160
+        reference: 5d356f9265b337b75f605dee839faa8cd0ed3ab2
       #TODO Update to split ceph charts
       ceph:
         type: git
@@ -165,7 +165,7 @@ data:
         type: git
         location: https://git.openstack.org/openstack/openstack-helm-infra
         subpath: helm-toolkit
-        reference: b6fc24b9960bc6de29aa70c7d5b7725319046160
+        reference: 5d356f9265b337b75f605dee839faa8cd0ed3ab2
       divingbell:
         type: git
         location: https://git.openstack.org/openstack/airship-divingbell
@@ -175,29 +175,27 @@ data:
         type: git
         location: https://git.openstack.org/openstack/openstack-helm-infra
         subpath: helm-toolkit
-        reference: b6fc24b9960bc6de29aa70c7d5b7725319046160
+        reference: 5d356f9265b337b75f605dee839faa8cd0ed3ab2
       drydock:
         type: git
         location: https://git.openstack.org/openstack/airship-drydock
         subpath: charts/drydock
-        reference: f8c821e7219f84f12e3a90e3101c6f20d3049b5b
-      # TODO waiting for https://review.openstack.org/#/c/595902/ to move to
-      #      openstack-helm-infra version.
+        reference: 3470f89519d018c572905566891bafc8a3c51c3b
       drydock-htk:
         type: git
-        location: https://git.openstack.org/openstack/openstack-helm
+        location: https://git.openstack.org/openstack/openstack-helm-infra
         subpath: helm-toolkit
-        reference: f902cd14fac7de4c4c9f7d019191268a6b4e9601
+        reference: 5d356f9265b337b75f605dee839faa8cd0ed3ab2
       ingress:
         type: git
         location: https://git.openstack.org/openstack/openstack-helm-infra
         subpath: ingress
-        reference: b6fc24b9960bc6de29aa70c7d5b7725319046160
+        reference: 5d356f9265b337b75f605dee839faa8cd0ed3ab2
       ingress-htk:
         type: git
         location: https://git.openstack.org/openstack/openstack-helm-infra
         subpath: helm-toolkit
-        reference: b6fc24b9960bc6de29aa70c7d5b7725319046160
+        reference: 5d356f9265b337b75f605dee839faa8cd0ed3ab2
       postgresql:
         type: git
         location: https://git.openstack.org/openstack/openstack-helm
@@ -207,17 +205,17 @@ data:
         type: git
         location: https://git.openstack.org/openstack/openstack-helm-infra
         subpath: helm-toolkit
-        reference: b6fc24b9960bc6de29aa70c7d5b7725319046160
+        reference: 5d356f9265b337b75f605dee839faa8cd0ed3ab2
       promenade:
         type: git
         location: https://git.openstack.org/openstack/airship-promenade
         subpath: charts/promenade
-        reference: 88c786b8e92d053fd0cba7237df68cc087b81f26
+        reference: cfb8aa498c294c2adbc369ba5aaee19b49550d22
       promenade-htk:
         type: git
         location: https://git.openstack.org/openstack/openstack-helm-infra
         subpath: helm-toolkit
-        reference: b6fc24b9960bc6de29aa70c7d5b7725319046160
+        reference: 5d356f9265b337b75f605dee839faa8cd0ed3ab2
       keystone:
         type: git
         location: https://git.openstack.org/openstack/openstack-helm
@@ -227,19 +225,17 @@ data:
         type: git
         location: https://git.openstack.org/openstack/openstack-helm-infra
         subpath: helm-toolkit
-        reference: b6fc24b9960bc6de29aa70c7d5b7725319046160
+        reference: 5d356f9265b337b75f605dee839faa8cd0ed3ab2
       maas:
         type: git
         location: https://git.openstack.org/openstack/airship-maas
         subpath: charts/maas
-        # TODO(bryan-strassner) set to new version
-        #     when https://review.openstack.org/#/c/595398/ is complete
-        reference: refs/changes/98/595398/5
+        reference: 2e003450cceb16b9bda71aa69a939a8466516582
       maas-htk:
         type: git
         location: https://git.openstack.org/openstack/openstack-helm-infra
         subpath: helm-toolkit
-        reference: b6fc24b9960bc6de29aa70c7d5b7725319046160
+        reference: 5d356f9265b337b75f605dee839faa8cd0ed3ab2
       mariadb:
         type: git
         location: https://git.openstack.org/openstack/openstack-helm
@@ -249,54 +245,54 @@ data:
         type: git
         location: https://git.openstack.org/openstack/openstack-helm-infra
         subpath: helm-toolkit
-        reference: b6fc24b9960bc6de29aa70c7d5b7725319046160
+        reference: 5d356f9265b337b75f605dee839faa8cd0ed3ab2
       memcached:
         type: git
         location: https://git.openstack.org/openstack/openstack-helm-infra
         subpath: memcached
-        reference: b6fc24b9960bc6de29aa70c7d5b7725319046160
+        reference: 5d356f9265b337b75f605dee839faa8cd0ed3ab2
       memcached-htk:
         type: git
         location: https://git.openstack.org/openstack/openstack-helm-infra
         subpath: helm-toolkit
-        reference: b6fc24b9960bc6de29aa70c7d5b7725319046160
+        reference: 5d356f9265b337b75f605dee839faa8cd0ed3ab2
       rabbitmq:
         type: git
         location: https://git.openstack.org/openstack/openstack-helm-infra
         subpath: rabbitmq
-        reference: b6fc24b9960bc6de29aa70c7d5b7725319046160
+        reference: 5d356f9265b337b75f605dee839faa8cd0ed3ab2
       rabbitmq-htk:
         type: git
         location: https://git.openstack.org/openstack/openstack-helm-infra
         subpath: helm-toolkit
-        reference: b6fc24b9960bc6de29aa70c7d5b7725319046160
+        reference: 5d356f9265b337b75f605dee839faa8cd0ed3ab2
       shipyard:
         type: git
         location: https://git.openstack.org/openstack/airship-shipyard
         subpath: charts/shipyard
-        reference: 188aa9d9f1bb4d2b95fb72783a44ee5d06eb331b
+        reference: 4dd6b484d11e86ad51da733841b9ef137421d461
       shipyard-htk:
         type: git
         location: https://git.openstack.org/openstack/openstack-helm-infra
         subpath: helm-toolkit
-        reference: b6fc24b9960bc6de29aa70c7d5b7725319046160
+        reference: bb3ff98d53c38a2ba70f506a8b6dc36207baa207
       tiller:
         type: git
         location: https://git.openstack.org/openstack/airship-armada
         subpath: charts/tiller
-        reference: 9c3ebe68c76c62244d52a7f5ceffc2e955970290
+        reference: 709eb9ec9b78b76fd18b817ae6c7a32221e9d0c4
       tiller-htk:
         type: git
         location: https://git.openstack.org/openstack/openstack-helm-infra
         subpath: helm-toolkit
-        reference: b6fc24b9960bc6de29aa70c7d5b7725319046160
+        reference: 5d356f9265b337b75f605dee839faa8cd0ed3ab2
 
   files:
     kubelet: https://dl.k8s.io/v1.10.2/kubernetes-node-linux-amd64.tar.gz
   images:
     ucp:
       armada:
-        api: quay.io/airshipit/armada:9c3ebe68c76c62244d52a7f5ceffc2e955970290
+        api: quay.io/airshipit/armada:709eb9ec9b78b76fd18b817ae6c7a32221e9d0c4
         dep_check: quay.io/stackanetes/kubernetes-entrypoint:v0.3.1
         ks_endpoints: docker.io/openstackhelm/heat:ocata
         ks_service: docker.io/openstackhelm/heat:ocata
@@ -305,7 +301,7 @@ data:
         tiller: gcr.io/kubernetes-helm/tiller:v2.10.0
       promenade:
         dep_check: quay.io/stackanetes/kubernetes-entrypoint:v0.3.1
-        promenade: quay.io/airshipit/promenade:88c786b8e92d053fd0cba7237df68cc087b81f26
+        promenade: quay.io/airshipit/promenade:cfb8aa498c294c2adbc369ba5aaee19b49550d22
         ks_user: docker.io/openstackhelm/heat:ocata
         ks_service: docker.io/openstackhelm/heat:ocata
         ks_endpoints: docker.io/openstackhelm/heat:ocata
@@ -331,21 +327,21 @@ data:
         ks_user: docker.io/openstackhelm/heat:ocata
         barbican_api: docker.io/openstackhelm/barbican:ocata
       drydock:
-        drydock: quay.io/airshipit/drydock:a41acdd7607ff5281d3df3ea435e15d5ff5c3f99
+        drydock: quay.io/airshipit/drydock:3470f89519d018c572905566891bafc8a3c51c3b
         dep_check: quay.io/stackanetes/kubernetes-entrypoint:v0.3.1
         ks_user: docker.io/openstackhelm/heat:ocata
         ks_service: docker.io/openstackhelm/heat:ocata
         ks_endpoints: docker.io/openstackhelm/heat:ocata
         drydock_db_init: docker.io/postgres:9.5
-        drydock_db_sync: quay.io/airshipit/drydock:a41acdd7607ff5281d3df3ea435e15d5ff5c3f99
+        drydock_db_sync: quay.io/airshipit/drydock:3470f89519d018c572905566891bafc8a3c51c3b
       shipyard:
-        airflow: quay.io/airshipit/airflow:188aa9d9f1bb4d2b95fb72783a44ee5d06eb331b
-        shipyard: quay.io/airshipit/shipyard:188aa9d9f1bb4d2b95fb72783a44ee5d06eb331b
+        airflow: quay.io/airshipit/airflow:4dd6b484d11e86ad51da733841b9ef137421d461
+        shipyard: quay.io/airshipit/shipyard:4dd6b484d11e86ad51da733841b9ef137421d461
         dep_check: quay.io/stackanetes/kubernetes-entrypoint:v0.3.1
         shipyard_db_init: docker.io/postgres:9.5
-        shipyard_db_sync: quay.io/airshipit/shipyard:188aa9d9f1bb4d2b95fb72783a44ee5d06eb331b
+        shipyard_db_sync: quay.io/airshipit/shipyard:4dd6b484d11e86ad51da733841b9ef137421d461
         airflow_db_init: docker.io/postgres:9.5
-        airflow_db_sync: quay.io/airshipit/airflow:188aa9d9f1bb4d2b95fb72783a44ee5d06eb331b
+        airflow_db_sync: quay.io/airshipit/airflow:4dd6b484d11e86ad51da733841b9ef137421d461
         ks_user: docker.io/openstackhelm/heat:ocata
         ks_service: docker.io/openstackhelm/heat:ocata
         ks_endpoints: docker.io/openstackhelm/heat:ocata
@@ -356,6 +352,7 @@ data:
         maas_region: quay.io/airshipit/maas-region-controller:dfb92ce07f87648f3423be11e51425923bc9f8b1
         bootstrap: quay.io/airshipit/maas-region-controller:dfb92ce07f87648f3423be11e51425923bc9f8b1
         export_api_key: quay.io/airshipit/maas-region-controller:dfb92ce07f87648f3423be11e51425923bc9f8b1
+        # TODO: update to verified quay.io/airshipit/sstream-cache image
         maas_cache: quay.io/attcomdev/sstream-cache@sha256:sha256:90d0dc73785534ef6a3035265275e197a66727beeb9c979f60d3bbf31a6a8864
         dep_check: quay.io/stackanetes/kubernetes-entrypoint:v0.3.1
       keystone:
@@ -419,7 +416,7 @@ data:
         etcd: quay.io/coreos/etcd:v3.2.14
         etcdctl: quay.io/coreos/etcd:v3.2.14
       kubectl: gcr.io/google_containers/hyperkube-amd64:v1.10.2
-      pause: gcr.io/google_containers/pause-amd64:3.0
+      pause: gcr.io/google_containers/pause-amd64:3.1
       scheduler:
         anchor: gcr.io/google_containers/hyperkube-amd64:v1.10.2
         scheduler: gcr.io/google_containers/hyperkube-amd64:v1.10.2
@@ -430,11 +427,11 @@ data:
         etcd: quay.io/coreos/etcd:v3.2.14
         etcdctl: quay.io/coreos/etcd:v3.2.14
       calico:
-        cni: quay.io/calico/cni:v1.11.2
-        ctl: quay.io/calico/ctl:v1.6.2
-        kube_policy_controller: quay.io/calico/kube-policy-controller:v0.7.0
-        node: quay.io/calico/node:v2.6.5
-        settings: quay.io/calico/ctl:v1.6.2
+        cni: quay.io/calico/cni:v3.2.1
+        ctl: quay.io/calico/ctl:release-v3.2-amd64
+        kube_controllers: quay.io/calico/kube-controllers:v3.2.1
+        node: quay.io/calico/node:v3.2.1
+        settings: quay.io/calico/ctl:release-v3.2-amd64
   packages:
     named:
       docker: docker.io

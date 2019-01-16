@@ -17,7 +17,7 @@ ingress_dns_config() {
     done
   done
 
-  DNS_DOMAIN=${ingress_domain} ZONE_FILE=$(basename $DNS_ZONE_FILE) envsubst < "${TEMPLATE_DIR}/ingress_corefile.sub" > "${COREFILE}"
+  DNS_DOMAIN=${ingress_domain} ZONE_FILE=$(basename $DNS_ZONE_FILE) DNS_SERVERS="$UPSTREAM_DNS" envsubst < "${TEMPLATE_DIR}/ingress_corefile.sub" > "${COREFILE}"
 }
 
 ingress_dns_start() {
@@ -30,5 +30,5 @@ ingress_dns_start() {
   ssh_cmd "${nodename}" mkdir -p "${remote_work_dir}"
   rsync_cmd "$DNS_ZONE_FILE" "${nodename}:${remote_zone_file}"
   rsync_cmd "$COREFILE" "${nodename}:${remote_corefile}"
-  ssh_cmd "${nodename}" docker run -d -v /var/tmp/coredns:/data -w /data --network host -P $IMAGE_COREDNS -conf $(basename $remote_corefile)
+  ssh_cmd "${nodename}" docker run -d -v /var/tmp/coredns:/data -w /data --network host --restart always -P $IMAGE_COREDNS -conf $(basename $remote_corefile)
 }
