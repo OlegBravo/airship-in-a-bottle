@@ -59,6 +59,9 @@ data:
             application: neutron
             component: ks-endpoints
   values:
+    images:
+      tags:
+        opencontrail_neutron_init: opencontrailnightly/contrail-openstack-neutron-init:ocata-master-latest
     labels:
       job:
         node_selector_key: openstack-control-plane
@@ -72,6 +75,12 @@ data:
     network:
       backend:
         - tungstenfabric
+    dependencies:
+      dynamic:
+        targeted:
+          tungstenfabric:
+            server:
+              daemonset: []
     conf:
       neutron:
         DEFAULT:
@@ -86,6 +95,11 @@ data:
         tungstenfabric:
           APISERVER:
             api_server_ip: config-api-server.tf.svc.cluster.local
+            api_server_port: 8082
+            contrail_extensions: "ipam:neutron_plugin_contrail.plugins.opencontrail.contrail_plugin_ipam.NeutronPluginContrailIpam,policy:neutron_plugin_contrail.plugins.opencontrail.contrail_plugin_policy.NeutronPluginContrailPolicy,route-table:neutron_plugin_contrail.plugins.opencontrail.contrail_plugin_vpc.NeutronPluginContrailVpc,contrail:None,service-interface:None,vf-binding:None"
+            multi_tenancy: True
+          KEYSTONE:
+            insecure: True
     manifests:
       daemonset_dhcp_agent: false
       daemonset_l3_agent: false
