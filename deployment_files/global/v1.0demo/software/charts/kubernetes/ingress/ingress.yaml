@@ -35,6 +35,9 @@ data:
           labels:
             release_group: airship-ingress-kube-system
   values:
+    images:
+      tags:
+        ingress: quay.io/kubernetes-ingress-controller/nginx-ingress-controller:0.9.0
     labels:
       server:
         node_selector_key: kube-ingress
