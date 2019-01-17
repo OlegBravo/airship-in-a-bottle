@@ -91,8 +91,8 @@ data:
       service_ip: 10.96.232.136
 
   dns:
-    cluster_domain: cluster.local
-    node_domain: gate.local
+    cluster_domain: localdomain
+    node_domain: localdomain
     service_ip: 10.96.0.10
     upstream_servers:
       - 8.8.8.8
