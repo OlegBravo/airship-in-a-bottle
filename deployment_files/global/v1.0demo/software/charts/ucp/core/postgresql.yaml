@@ -67,6 +67,9 @@ data:
     post:
       create: []
   values:
+    storage:
+      pvc:
+        enabled: false
     development:
       enabled: false
     labels:
