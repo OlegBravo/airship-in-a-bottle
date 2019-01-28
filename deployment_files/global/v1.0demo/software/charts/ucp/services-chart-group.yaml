@@ -12,7 +12,6 @@ data:
   sequenced: true
   chart_group:
     - ucp-tiller
-    - ucp-maas
     - ucp-armada
     - ucp-barbican
     - ucp-deckhand
