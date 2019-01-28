@@ -191,9 +191,9 @@ data:
         dns:
           require_dnssec: 'no'
     endpoints:
-      ingress:
+      maas_ingress:
         port:
-          server:
+          ingress_default_server:
             default: 8182
   dependencies:
     - maas-htk

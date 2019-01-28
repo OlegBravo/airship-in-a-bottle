@@ -207,7 +207,7 @@ data:
         type: git
       maas:
         location: https://git.openstack.org/openstack/airship-maas
-        reference: 617607e42690befae69c86ad9b21134fdd467cbb
+        reference: bb81a1cecd27520b858e00f0bcf519ceb2d07582
         subpath: charts/maas
         type: git
       maas-htk:
