@@ -261,6 +261,10 @@ function generate_genesis() {
 }
 
 function run_genesis() {
+  # do not override /etc/hosts
+  cp /etc/hosts /etc/hosts.save
+  sed -i -e 's|# Disable swap|cp /etc/hosts.save /etc/hosts|g' ${WORKSPACE}/genesis/genesis.sh
+
   # Runs the genesis script that was generated
   ${WORKSPACE}/genesis/genesis.sh
 }
