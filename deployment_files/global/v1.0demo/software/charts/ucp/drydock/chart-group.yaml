@@ -10,5 +10,4 @@ metadata:
 data:
   description: Drydock
   chart_group:
-    - ucp-maas
     - ucp-drydock
