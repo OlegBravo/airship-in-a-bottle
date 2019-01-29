@@ -190,11 +190,6 @@ data:
           use_external_only: 'false'
         dns:
           require_dnssec: 'no'
-    endpoints:
-      maas_ingress:
-        port:
-          ingress_default_server:
-            default: 8182
   dependencies:
     - maas-htk
 ...

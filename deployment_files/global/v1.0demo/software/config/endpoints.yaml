@@ -159,6 +159,8 @@ data:
           podport: 10259
         status:
           podport: 18089
+        ingress_default_server:
+          default: 8182
     kubernetesprovisioner:
       name: promenade
       hosts:
