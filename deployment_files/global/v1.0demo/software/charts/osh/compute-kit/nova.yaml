@@ -129,6 +129,8 @@ data:
       nova:
         libvirt:
           virt_type: qemu
+    manifests:
+      pod_rally_test: false
   dependencies:
     - openstack-nova-helm-toolkit
 ---

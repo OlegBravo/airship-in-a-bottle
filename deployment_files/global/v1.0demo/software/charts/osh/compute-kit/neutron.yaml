@@ -107,6 +107,7 @@ data:
       daemonset_metadata_agent: false
       daemonset_ovs_agent: false
       daemonset_sriov_agent: false
+      pod_rally_test: false
   dependencies:
     - openstack-neutron-helm-toolkit
 ---
