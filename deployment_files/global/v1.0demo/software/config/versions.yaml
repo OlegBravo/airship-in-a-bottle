@@ -424,7 +424,7 @@ data:
         reference: master
       vrouter:
         type: git
-        location: https://github.com/juniper/contrail-helm-deployer
+        location: https://github.com/andrey-mp/contrail-helm-deployer
         subpath: contrail-vrouter
         reference: master
       tf-htk:
