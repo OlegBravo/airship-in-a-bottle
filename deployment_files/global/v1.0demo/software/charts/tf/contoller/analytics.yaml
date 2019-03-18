@@ -64,6 +64,12 @@ data:
       analytics:
         node_selector_key: tungstenfabric-controller
         node_selector_value: enabled
+      analytics_snmp:
+        node_selector_key: tungstenfabric-controller
+        node_selector_value: enabled
+      analytics_alarm:
+        node_selector_key: tungstenfabric-controller
+        node_selector_value: enabled
     manifests:
       configmap_analytics_keystone: false
       configmap_analytics_rabbitmq: false

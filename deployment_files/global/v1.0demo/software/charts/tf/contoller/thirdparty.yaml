@@ -67,9 +67,6 @@ data:
       analyticsdb:
         node_selector_key: tungstenfabric-controller
         node_selector_value: enabled
-      analytics_zookeeper:
-        node_selector_key: tungstenfabric-controller
-        node_selector_value: enabled
       config_zookeeper:
         node_selector_key: tungstenfabric-controller
         node_selector_value: enabled
