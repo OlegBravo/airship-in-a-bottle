@@ -2,8 +2,8 @@
 
 mkdir -p /root/deploy && cd /root/deploy
 git clone https://github.com/progmaticlab/airship-in-a-bottle
-git clone https://git.openstack.org/openstack/airship-pegleg.git
-git clone https://git.openstack.org/openstack/airship-shipyard.git
+git clone https://opendev.org/airship/pegleg.git airship-pegleg
+git clone https://opendev.org/airship/shipyard.git airship-shipyard
 sed -i 's/-it/-i/g' airship-pegleg/tools/pegleg.sh
 
 cd ./airship-in-a-bottle/manifests/dev_single_node
