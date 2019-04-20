@@ -82,6 +82,7 @@ data:
             server:
               daemonset: []
     conf:
+      openstack_version: ocata
       neutron:
         DEFAULT:
           core_plugin: neutron_plugin_contrail.plugins.opencontrail.contrail_plugin.NeutronPluginContrailCoreV2
