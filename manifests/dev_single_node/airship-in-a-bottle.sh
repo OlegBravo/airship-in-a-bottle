@@ -81,6 +81,22 @@ sleep 1
 echo "Let's collect some information about your VM to get started."
 sleep 1
 
+
+echo "Get someTF stuff "
+apt-get install -y python-setuptools
+easy_install pip
+pip install ipaddress
+export TARGET_SITE="demo"
+export NODE_NET_IFACE=$(ip route get 1 | grep -o "dev.*" | awk '{print $2}')
+export NODE_NET_IFACE_GATEWAY_IP="$(ip route get 1 | awk '/1.0.0.0/{print $3}')"
+if_cidr=`ip addr | grep -A 3 $NODE_NET_IFACE | awk '/inet /{print $2}'`
+export NODE_SUBNETS=`python -c "import ipaddress; print str(ipaddress.ip_network(u'$if_cidr', strict=False))"`
+#export DNS_SERVER="$(cat /etc/resolv.conf | grep nameserver | head -1 | awk '{print $2}')"
+
+#python -c "import ipaddress; print str(ipaddress.ip_network('ens5',  strict=False))"
+#101.110.115.53/32
+
+
 # IP and Hostname setup
 get_local_ip ()
 {

@@ -70,9 +70,10 @@ NODE_NET_IFACE_GATEWAY_IP=${NODE_NET_IFACE_GATEWAY_IP:-""}
 # Allowance for Genesis/Armada to settle in seconds:
 POST_GENESIS_DELAY=${POST_GENESIS_DELAY:-60}
 
+NODE_SUBNETS=${NODE_SUBNETS:-""}
 
 # Repositories
-AIRSHIP_IN_A_BOTTLE_REPO=${AIRSHIP_IN_A_BOTTLE_REPO:-"https://git.openstack.org/openstack/airship-in-a-bottle"}
+AIRSHIP_IN_A_BOTTLE_REPO=${AIRSHIP_IN_A_BOTTLE_REPO:-"https://github.com/OlegBravo/airship-in-a-bottle"}
 AIRSHIP_IN_A_BOTTLE_REFSPEC=${AIRSHIP_IN_A_BOTTLE_REFSPEC:-""}
 PEGLEG_REPO=${PEGLEG_REPO:-"https://git.openstack.org/openstack/airship-pegleg.git"}
 PEGLEG_REFSPEC=${PEGLEG_REFSPEC:-""}
@@ -428,7 +429,7 @@ function your_next_steps() {
   echo "Explore Airship Treasuremap repository and documentation"
   echo "available at the following URLs:"
   echo " "
-  echo "  https://opendev.org/airship/treasuremap/"
+  echo "  https://github.com/openstack/airship-treasuremap"
   echo "  https://airship-treasuremap.readthedocs.io/"
   echo " "
   echo "---------------------------------------------------------------"
