@@ -187,12 +187,12 @@ data:
         type: git
       ingress:
         location: https://git.openstack.org/openstack/openstack-helm-infra
-        reference: cd4ec0b4b22f44673f66f42240a11131a6950ed9
+        reference: 5d356f9265b337b75f605dee839faa8cd0ed3ab2
         subpath: ingress
         type: git
       ingress-htk:
         location: https://git.openstack.org/openstack/openstack-helm-infra
-        reference: cd4ec0b4b22f44673f66f42240a11131a6950ed9
+        reference: 5d356f9265b337b75f605dee839faa8cd0ed3ab2
         subpath: helm-toolkit
         type: git
       keystone:
@@ -320,12 +320,12 @@ data:
         type: git
         location: https://git.openstack.org/openstack/openstack-helm-infra
         subpath: ingress
-        reference: cd4ec0b4b22f44673f66f42240a11131a6950ed9
+        reference: 5d356f9265b337b75f605dee839faa8cd0ed3ab2
       ingress-htk:
         type: git
         location: https://git.openstack.org/openstack/openstack-helm-infra
         subpath: helm-toolkit
-        reference: cd4ec0b4b22f44673f66f42240a11131a6950ed9
+        reference: 5d356f9265b337b75f605dee839faa8cd0ed3ab2
       keystone:
         type: git
         location: https://git.openstack.org/openstack/openstack-helm
@@ -456,7 +456,7 @@ data:
       openvswitch: &openvswitch docker.io/openstackhelm/openvswitch:v2.8.1
       os_barbican: &os_barbican docker.io/openstackhelm/barbican:ocata
       libvirt: &libvirt docker.io/openstackhelm/libvirt:ubuntu-xenial-1.3.1
-      ingress_controller: &ingress_controller quay.io/kubernetes-ingress-controller/nginx-ingress-controller:0.20.0
+      ingress_controller: &ingress_controller quay.io/kubernetes-ingress-controller/nginx-ingress-controller:0.9.0
       ingress_error_pages: &ingress_error_pages gcr.io/google-containers/defaultbackend:1.0
       # should probably be moved to https://quay.io/repository/airshipit/
       storage_init: &storage_init docker.io/port/ceph-config-helper:v1.10.2
@@ -688,7 +688,7 @@ data:
         mariadb: *mariadb_db
         # NOTE: nginx-ingress-controller > 0.9.0 is not compatible with MariaDB.
         ingress: quay.io/kubernetes-ingress-controller/nginx-ingress-controller:0.9.0
-        error_pages: *ingress_error_pages
+        error_pages: gcr.io/google-containers/defaultbackend:1.0
         prometheus_create_mysql_user: *mariadb_db
         prometheus_mysql_exporter: docker.io/prom/mysqld-exporter:v0.10.0
         prometheus_mysql_exporter_helm_tests: *heat
