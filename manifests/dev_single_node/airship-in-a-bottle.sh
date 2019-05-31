@@ -177,3 +177,5 @@ echo ""
 echo "Starting Airship deployment..."
 sleep 1
 ../common/deploy-airship.sh demo
+docker exec -it $cid bash -c "printf \"\nconfig.staticAuth = [];\nconfig.staticAuth[0] = {};\nconfig.staticAuth[0].username = 'admin';\nconfig.staticAuth[0].password = 'contrail123';\nconfig.staticAuth[0].roles = ['cloudAdmin'];\n\" >> /etc/contrail/config.global.js"
+docker exec -it $cid tail -6 /etc/contrail/config.global.js
