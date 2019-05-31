@@ -356,7 +356,7 @@ function execute_deploy_site() {
   ./run_shipyard.sh create configdocs secrets --filename=/home/shipyard/host/certificates.yaml --append
   ./run_shipyard.sh commit configdocs
   # set variables used in execute_shipyard_action.sh
-  export max_shipyard_count=${max_shipyard_count:-60}
+  export max_shipyard_count=${max_shipyard_count:-120}
   export shipyard_query_time=${shipyard_query_time:-90}
   # monitor the execution of deploy_site
   bash execute_shipyard_action.sh 'deploy_site'
