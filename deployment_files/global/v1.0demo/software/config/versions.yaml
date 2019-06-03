@@ -368,9 +368,9 @@ data:
         reference: cd4ec0b4b22f44673f66f42240a11131a6950ed9
       neutron:
         type: git
-        location: https://github.com/progmaticlab/openstack-helm
+        location: https://github.com/OlegBravo/openstack-helm
         subpath: neutron
-        reference: airship
+        reference: c46d356e08775f9b8c7e57e313d1db20490c7d5c
       neutron-htk:
         type: git
         location: https://git.openstack.org/openstack/openstack-helm-infra
@@ -378,9 +378,9 @@ data:
         reference: cd4ec0b4b22f44673f66f42240a11131a6950ed9
       nova:
         type: git
-        location: https://github.com/progmaticlab/openstack-helm
+        location: https://github.com/OlegBravo/openstack-helm
         subpath: nova
-        reference: airship
+        reference: c46d356e08775f9b8c7e57e313d1db20490c7d5c
       nova-htk:
         type: git
         location: https://git.openstack.org/openstack/openstack-helm-infra
