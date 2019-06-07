@@ -370,17 +370,17 @@ data:
         type: git
         location: https://github.com/OlegBravo/openstack-helm
         subpath: neutron
-          reference: be57eb94c574bf6a000e646cf5c4a15376e3932a
+        reference: eb88540ff5f35070745aac09ec2f9e73ad4bf98b
       neutron-htk:
         type: git
         location: https://git.openstack.org/openstack/openstack-helm-infra
-        subpath: helm-toolkitbe57eb94c574bf6a000e646cf5c4a15376e3932a
+        subpath: helm-toolkit
         reference: cd4ec0b4b22f44673f66f42240a11131a6950ed9
       nova:
         type: git
         location: https://github.com/OlegBravo/openstack-helm
         subpath: nova
-        reference: be57eb94c574bf6a000e646cf5c4a15376e3932a
+        reference: eb88540ff5f35070745aac09ec2f9e73ad4bf98b
       nova-htk:
         type: git
         location: https://git.openstack.org/openstack/openstack-helm-infra
