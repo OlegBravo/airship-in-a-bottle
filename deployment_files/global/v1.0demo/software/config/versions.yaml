@@ -197,7 +197,7 @@ data:
         type: git
       keystone:
         location: https://git.openstack.org/openstack/openstack-helm
-        reference: 9d72fe1a501bc609a875eebf7b6274e18600ed70
+        reference: z
         subpath: keystone
         type: git
       keystone-htk:
@@ -370,7 +370,7 @@ data:
         type: git
         location: https://github.com/OlegBravo/openstack-helm
         subpath: neutron
-        reference: 13b193b597562414c0827f1c8f452646c2fc296d
+          reference: be57eb94c574bf6a000e646cf5c4a15376e3932a
       neutron-htk:
         type: git
         location: https://git.openstack.org/openstack/openstack-helm-infra
@@ -380,7 +380,7 @@ data:
         type: git
         location: https://github.com/OlegBravo/openstack-helm
         subpath: nova
-        reference: 13b193b597562414c0827f1c8f452646c2fc296d
+        reference: be57eb94c574bf6a000e646cf5c4a15376e3932a
       nova-htk:
         type: git
         location: https://git.openstack.org/openstack/openstack-helm-infra
