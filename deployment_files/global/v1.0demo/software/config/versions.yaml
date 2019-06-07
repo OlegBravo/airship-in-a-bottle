@@ -197,7 +197,7 @@ data:
         type: git
       keystone:
         location: https://git.openstack.org/openstack/openstack-helm
-        reference: z
+        reference: 9d72fe1a501bc609a875eebf7b6274e18600ed70
         subpath: keystone
         type: git
       keystone-htk:
