@@ -83,6 +83,8 @@ data:
           required:
             - helm
           additionalProperties: false
+        monitoring_image:
+          type: object
         kubernetes:
           type: object
           properties:
