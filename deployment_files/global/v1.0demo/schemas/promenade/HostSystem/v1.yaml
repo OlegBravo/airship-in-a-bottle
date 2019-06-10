@@ -84,7 +84,7 @@ data:
             - helm
           additionalProperties: false
         monitoring_image:
-          type: object
+          $ref: '#/definitions/image'
         kubernetes:
           type: object
           properties:
