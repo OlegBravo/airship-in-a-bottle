@@ -69,7 +69,7 @@ metadata:
     - src:
         schema: pegleg/SoftwareVersions/v1
         name: software-versions
-        path: .images.ucp.promenade.monitoring_image
+        path: .images.kubernetes.monitoring_image.monitoring_image
       dest:
         path: .images.monitoring_image
 
