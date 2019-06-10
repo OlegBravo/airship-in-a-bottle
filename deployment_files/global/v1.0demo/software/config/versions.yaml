@@ -508,13 +508,13 @@ data:
         maas_rack: quay.io/airshipit/maas-rack-controller:bb81a1cecd27520b858e00f0bcf519ceb2d07582
         maas_region: quay.io/airshipit/maas-region-controller:bb81a1cecd27520b858e00f0bcf519ceb2d07582
       promenade:
+        monitoring_image: busybox:1.28.3
+        promenade: quay.io/airshipit/promenade:master
         dep_check: quay.io/stackanetes/kubernetes-entrypoint:v0.3.1
         image_repo_sync: docker.io/docker:17.07.0
         ks_endpoints: docker.io/openstackhelm/heat:ocata
         ks_service: docker.io/openstackhelm/heat:ocata
         ks_user: docker.io/openstackhelm/heat:ocata
-        promenade: quay.io/airshipit/promenade:master
-        monitoring_image: busybox:1.28.3
       shipyard:
         airflow: quay.io/airshipit/airflow:4dd6b484d11e86ad51da733841b9ef137421d461
         airflow_db_init: docker.io/postgres:9.5
