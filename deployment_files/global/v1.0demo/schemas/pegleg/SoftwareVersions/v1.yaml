@@ -734,6 +734,8 @@ data:
                   type: string
                 ks_endpoints:
                   type: string
+                monitoring_image:
+                  type: string
             deckhand:
               type: object
               properties:
