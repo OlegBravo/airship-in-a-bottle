@@ -513,7 +513,7 @@ data:
         ks_endpoints: docker.io/openstackhelm/heat:ocata
         ks_service: docker.io/openstackhelm/heat:ocata
         ks_user: docker.io/openstackhelm/heat:ocata
-        promenade: quay.io/airshipit/promenade:cfb8aa498c294c2adbc369ba5aaee19b49550d22
+        promenade: quay.io/airshipit/promenade:master
         monitoring_image: busybox:1.28.3
       shipyard:
         airflow: quay.io/airshipit/airflow:4dd6b484d11e86ad51da733841b9ef137421d461
