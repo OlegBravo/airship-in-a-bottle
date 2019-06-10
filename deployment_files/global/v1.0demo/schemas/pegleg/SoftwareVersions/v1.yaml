@@ -734,8 +734,6 @@ data:
                   type: string
                 ks_endpoints:
                   type: string
-                monitoring_image:
-                  type: string
             deckhand:
               type: object
               properties:
@@ -980,6 +978,11 @@ data:
               type: object
               properties:
                 coredns:
+                  type: string
+            monitoring_image:
+              type: object
+              properties:
+                monitoring_image:
                   type: string
             haproxy:
               type: object
