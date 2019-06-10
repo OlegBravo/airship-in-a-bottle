@@ -979,11 +979,11 @@ data:
               properties:
                 coredns:
                   type: string
-            monitoring_image:
-              type: object
-              properties:
-                monitoring_image:
-                  type: string
+#            monitoring_image:
+#              type: object
+#              properties:
+#                monitoring_image:
+#                  type: string
             haproxy:
               type: object
               properties:

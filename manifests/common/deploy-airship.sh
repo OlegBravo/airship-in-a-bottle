@@ -83,7 +83,7 @@ SHIPYARD_REFSPEC=${SHIPYARD_REFSPEC:-""}
 # Images
 # TODO(bryan-strassner) refit to use master Pegleg
 PEGLEG_IMAGE=${PEGLEG_IMAGE:-"quay.io/airshipit/pegleg:ac6297eae6c51ab2f13a96978abaaa10cb46e3d6"}
-PROMENADE_IMAGE=${PROMENADE_IMAGE:-"quay.io/airshipit/promenade:master"}
+PROMENADE_IMAGE=${PROMENADE_IMAGE:-"quay.io/airshipit/promenade:1f5c57d1de732ed3a31469c4a526a34f7d381eff"}
 
 # Command shortcuts
 PEGLEG=${WORKSPACE}/airship-pegleg/tools/pegleg.sh

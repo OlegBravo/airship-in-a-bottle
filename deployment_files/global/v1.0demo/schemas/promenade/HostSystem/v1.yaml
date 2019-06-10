@@ -83,8 +83,8 @@ data:
           required:
             - helm
           additionalProperties: false
-        monitoring_image:
-          $ref: '#/definitions/image'
+#        monitoring_image:
+#          $ref: '#/definitions/image'
         kubernetes:
           type: object
           properties:
@@ -97,7 +97,7 @@ data:
         - haproxy
         - coredns
         - helm
-        - monitoring_image
+#        - monitoring_image
         - kubernetes
       additionalProperties: false
 
